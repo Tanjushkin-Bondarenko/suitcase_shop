@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as var;
+
+*{
+margin: 0;
+   box-sizing: border-box;
+    max-width: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+html,
+body {
+    font-family: var.$primary-font;
+    max-width: 100%;
+}

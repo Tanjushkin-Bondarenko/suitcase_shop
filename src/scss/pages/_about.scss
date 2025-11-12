@@ -1,0 +1,460 @@
+@use '../abstracts/variables' as var;
+
+#about{
+    #info{
+        background-image: url("/fundamentals-project-template/src/assets/img/about-bg.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 554px;
+        color: var.$white;
+
+    h2{
+        font-weight: 700;
+        font-size: 50px;
+    }
+
+      div{
+        font-size: 17px;
+        font-weight: 400px;
+        color: var.$white;
+      }
+    }
+
+    #about-blocks{
+        display: flex;
+        width: 80%;
+        margin: 130px auto;
+
+    .about-block{
+        width: 20%;
+        margin: 0 auto;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        h6{
+        font-weight: 700;
+        font-size: 20px;
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 17px;
+            text-align: center;
+            }
+    }
+    }
+
+    #article{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 80%;
+            margin: 130px auto;
+
+           h3{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 40px;
+            font-weight: 900;
+           }
+
+           article{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            color: var.$grey;
+            font-size: 17px;
+            font-weight: 400;
+            margin: 30px auto;
+           }
+
+          #see-all{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            width: 200px;
+            height: 60px;
+
+            &:hover{
+                cursor: pointer;
+            }}
+
+           img{
+            grid-column: 2/3;
+            grid-row: 1/4;
+            width: auto;
+            height: 352px;
+           }
+        }
+
+ #team{
+            width: 80%;
+            margin: 100px auto;
+            text-align: center;
+
+    h3{
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 10px;
+    }
+
+    svg{
+            text-align: center;
+            width: 440px;
+            height: 2px;
+            margin: 0 auto;
+    }
+
+    #our-team{
+            display: flex;
+
+    .team{
+            height: 480px;
+            width: 30%;
+            margin: 50px auto 30px;
+
+    .name{
+            font-size: 22px;
+            font-weight: 700;
+            margin: 25px auto;
+     }
+
+    .div{
+            font-weight: 400;
+            font-size: 17px;
+        }
+    }}
+ }  
+
+ #offer-block{
+           background-image: url("/fundamentals-project-template/src/assets/img/offer.jpg");
+           width: 80%;
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           height: 400px;
+           margin: 0 auto 120px;
+           justify-content: space-between;
+           align-items: center;
+           color: var.$white;
+
+    p{
+           text-align: center;
+    }
+
+    #offer{
+           font-size: 190px;
+           font-weight: 700;
+    }
+
+    .descr{
+           font-size: 20px;
+           font-weight: 400; 
+    }
+
+    #left-side{
+    #offer-month{
+          text-align: start;
+          font-size: 40px;
+          font-weight: 700;
+          padding-bottom: 30px;
+    }
+
+        .descr{
+           padding-bottom: 50px;
+           text-align: start;
+        }
+
+        #get-offer{
+           width: 200px;
+           font-size: 18px;
+        }
+    }
+ } 
+}
+
+@media screen and (width <= 1199px){
+    #about{
+    #info{
+        width: 100%;
+        height: 450px;
+
+    h2{
+        font-size: 45px;
+    }
+    }
+
+    #about-blocks{
+        width: 90%;
+        margin: 80px auto;
+        flex-wrap: wrap;
+
+    .about-block{
+        width: 40%;
+        justify-content: space-evenly;
+        height: 170px;
+
+    h6{
+        font-size: 18px;
+        }
+
+    p{ 
+        font-size: 16px;
+            }
+    }
+    }
+
+    #article{
+        width: 90%;
+        margin: 80px auto;
+
+           h3{
+        font-size: 35px;
+           }
+        }
+
+#team{
+        width: 90%;
+        margin: 60px auto;
+
+    h3{
+        font-size: 40px; 
+    }
+
+    #our-team{
+    .team{
+        height: 300px;
+        margin: 30px auto;
+
+    .name{
+        font-size: 18px;
+        margin: 15px auto;
+     }
+    }}
+ }  
+
+ #offer-block{
+        width: 90%;
+        height: 400px;
+        margin: 0 auto 80px;
+
+    #offer{
+        font-size: 120px;
+    }
+
+    .descr{
+        font-size: 17px;
+    }
+
+    #left-side{
+    #offer-month{
+        font-size: 35px;
+    }
+
+    .descr{
+        padding-bottom: 30px;
+        }
+
+    #get-offer{
+        font-size: 17px;
+        }
+    }
+ } 
+}
+}
+
+ @media (width <= 991px){
+#about{
+    #info{
+        height: 250px;
+
+    h2{
+        font-size: 25px;
+    }
+
+      div{
+        font-size: 15px;
+      }
+    }
+
+    #about-blocks{
+        margin: 70px auto;
+
+        .about-block{
+        h6{
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 15px;
+            }
+    }
+    }
+
+    #article{
+            grid-template-columns: 1fr;
+            margin: 50px auto;
+            justify-items: center;
+
+        h3{
+            font-size: 25px;
+           }
+
+        article{
+            font-size: 15px;
+            margin: 10px auto;
+           }
+
+        #see-all{
+            height: 40px;
+    }
+
+    img{
+            display: none;
+           }
+        }
+
+    #team{
+            width: 90%;
+            margin: 10px auto;
+
+    h3{
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 10px;
+    }
+
+    svg{
+            width: 270px;
+    }
+
+    #our-team{
+        .team{
+            height: auto;
+
+        .name{
+            font-size: 18px;
+            font-weight: 700;
+            margin: 7px auto;
+     }
+
+        .div{
+            font-size: 15px;
+        }
+    }}
+ }  
+
+    #offer-block{
+        height: 200px;
+        margin: 0 auto 50px;
+
+        #offer{
+           font-size: 70px;
+    }
+
+        .descr{
+           font-size: 17px;
+    }
+
+        #left-side{
+        #offer-month{
+            font-size: 20px;
+            padding-bottom: 10px;
+    }
+
+        #get-offer{
+            width: 150px;
+            font-size: 15px;
+        }
+    }
+ } 
+}
+ }
+
+ @media (width <= 767px) { 
+#about{
+    #info{
+        background: var.$white-grey none;
+        height: 100px;
+
+    h2{
+        color: var.$black;
+        font-size: 17px;
+    }
+
+    div{
+        color: var.$black;
+        font-size: 14px;
+      }
+    }
+
+    #about-blocks{
+       display: none;
+    }
+
+    #article{
+            h3{
+                font-size: 18px;
+           }
+
+            article{
+                font-size: 15px;
+                margin: 10px auto;
+           }
+
+            #see-all{
+                width: 150px;
+                height: 40px;
+}
+        }
+
+    #team{
+        h3{
+            font-size: 17px;   
+    }
+
+    #our-team{
+        .team{
+        .name{
+            font-size: 14px;
+     }
+
+        .div{
+            font-size: 13px;
+        }
+    }}
+ }  
+
+    #offer-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+    #offer{
+           font-size: 30px;
+    }
+
+    .descr{
+          display: none;
+    }
+
+    #left-side{ 
+        text-align: center;
+
+    #offer-month{
+        padding-bottom: 10px;
+    }
+
+        #get-offer{
+        width: 150px;
+        height: 30px;
+        }
+ } }
+}}
+ 
+
+ 

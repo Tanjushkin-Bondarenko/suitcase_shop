@@ -1,0 +1,243 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+@import 'https://fonts.cdnfonts.com/css/helvetica-neue-55';
+@import 'https://fonts.cdnfonts.com/css/sf-pro-display';
+header {
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+}
+header #name-content {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+header #name-content #social-networks,
+header #name-content #user-block {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+header #name-content #social-networks #login,
+header #name-content #user-block #login {
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  height: 28px;
+}
+header #name-content #social-networks #login:hover,
+header #name-content #user-block #login:hover {
+  cursor: pointer;
+}
+header #name-content #social-networks #login svg,
+header #name-content #user-block #login svg {
+  display: inline-block;
+}
+header #name-content #open-cart:hover {
+  cursor: pointer;
+}
+header #name-content #quantity-in-card {
+  text-align: center;
+  border: 1px solid #B92770;
+  border-radius: 50%;
+  color: #B92770;
+  font-size: 12px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 3px;
+  font-weight: 600;
+  position: relative;
+  left: 20px;
+}
+header #logo:hover {
+  cursor: pointer;
+}
+header #header-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 30px auto;
+  gap: 30px;
+}
+header #header-menu a {
+  text-decoration: none;
+  color: #000;
+}
+header #header-menu .active-menu {
+  color: #B92770;
+}
+header #header-menu #catalog {
+  margin-right: 3px;
+}
+
+#popup {
+  width: 380px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  background-color: #FFF;
+  z-index: 100;
+}
+#popup .popup-content {
+  width: 340px;
+  margin: 50px auto;
+}
+#popup .popup-content form {
+  display: grid;
+}
+#popup .popup-content form input {
+  width: 100%;
+  border: 1px solid #B92770;
+}
+#popup .popup-content form .required-snow {
+  color: #B92770;
+}
+#popup .popup-content form #wrapper-for-email {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#popup .popup-content form #wrapper-for-password {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+#popup .popup-content form #wrapper-for-password #togle-password {
+  position: relative;
+  left: 89%;
+  top: -57%;
+  width: 20px;
+  cursor: pointer;
+  color: #727174;
+}
+#popup .popup-content form #wrapper-for-checkbox {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#popup .popup-content form #wrapper-for-checkbox input {
+  width: 20px;
+  margin: 0;
+  display: inline-block;
+}
+#popup .popup-content form #wrapper-for-checkbox label {
+  color: #727174;
+  font-size: 11px;
+  font-weight: 400;
+}
+#popup .popup-content form .forgot-password {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  color: #B92770;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+#popup .popup-content form #login-button {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+}
+
+@media screen and (width <= 1199px) {
+  #popup {
+    width: 270px;
+  }
+  #popup .popup-content {
+    width: 250px;
+    margin: 10px auto;
+  }
+  #popup .popup-content form input {
+    margin-bottom: 10px;
+  }
+  #popup .popup-content form #wrapper-for-password #togle-password {
+    left: 14rem;
+    top: -43%;
+  }
+  #popup .popup-content form #login-button {
+    height: 30px;
+  }
+}
+@media screen and (width <= 991px) {
+  #popup {
+    width: 250px;
+    top: 8%;
+    left: 73%;
+  }
+  #popup .popup-content {
+    width: 250px;
+    margin: 10px auto;
+  }
+  #popup .popup-content form #wrapper-for-password #togle-password {
+    left: 13.5rem;
+    top: -44%;
+  }
+  #popup .popup-content form #login-button {
+    height: 20px;
+  }
+}
+@media (width <= 767px) {
+  #header-content {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+  #header-content #name-content {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #header-content #name-content #social-networks,
+  #header-content #name-content #user-block {
+    display: flex;
+    align-items: center;
+  }
+  #header-content #name-content #social-networks svg,
+  #header-content #name-content #user-block svg {
+    height: 25px;
+    width: 25px;
+  }
+  #header-content #name-content #social-networks #cart-icon,
+  #header-content #name-content #user-block #cart-icon {
+    height: 35px;
+  }
+  #header-content #name-content #social-networks #login,
+  #header-content #name-content #user-block #login {
+    height: 20px;
+  }
+  #header-content #name-content #logo {
+    height: 30px;
+    width: 200px;
+  }
+  #header-content #name-content #quantity-in-card {
+    font-size: 9px;
+    top: 8px;
+  }
+  #header-content #header-menu {
+    margin: 10px auto;
+    gap: 30px;
+  }
+  #popup {
+    width: 270px;
+    top: 6%;
+    left: 54%;
+  }
+  #popup .popup-content {
+    width: 250px;
+    margin: 10px;
+  }
+  #popup .popup-content form #wrapper-for-password #togle-password {
+    left: 14rem;
+    top: -44%;
+    width: 20px;
+  }
+  #popup .popup-content form #login-button {
+    height: 20px;
+  }
+}/*# sourceMappingURL=header.css.map */

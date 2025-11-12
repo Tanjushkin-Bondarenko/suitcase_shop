@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as var;
+
+button{
+    background-color: var.$pink;
+    font-family: var.$third-font;
+    color: var.$white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 174px;
+    height: 60px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;        
+}
+
+.filter-btn{
+    background-color: var.$white;
+    color: var.$grey;
+    border: 2px solid var.$white-grey;
+    height: 40px;
+    width: 200px;
+    font-weight: 400;
+    font-size: 16px;  
+    
+}
+
+.page-change-btn{
+    width: 88px;
+    height: 40px;
+    margin-top: 10px;
+    background: var.$white;
+    color: var.$black;
+    border: 2px solid var.$pink;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    font-family: var.$secondary-font;
+   
+}
+
+.add-to-cart{
+        height: 40px;
+        text-align: center;
+        width: 150px;
+        font-family: var.$fourth-font; 
+    }
+
+
+@media screen and (width <= 1199px){
+     button{
+                width: 160px;
+                height: 50px;
+                 font-size: 16px;
+                 font-weight: 500; 
+         }
+
+    .filter-btn{
+        height: 35px;
+        width: 160px;
+        }
+    }
+
+   @media screen and (width <= 991px){
+    button{
+    height: 40px;
+     font-size: 14px;
+    font-weight: 400;
+}
+
+.filter-btn{
+        height: 25px;
+        width: 150px;
+        font-size: 14px;
+        }
+
+        .add-to-cart{
+        height: 25px;
+    }
+   }
+
+@media (width <= 767px){
+button{
+    width: 150px;
+    height: 30px; 
+    font-size: 11px;
+}
+
+.filter-btn{
+    height: 20px;
+    width: 120px;
+    font-size: 12px;
+}
+
+.add-to-cart{
+    height: 25px;
+    width: 120px;
+    font-size: 12px;
+    font-weight: 400;
+    }
+}

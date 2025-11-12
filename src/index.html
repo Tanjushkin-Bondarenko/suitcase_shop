@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Shop</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/fundamentals-project-template/src/scss/layouts/header.css">
+    <link rel="stylesheet" href="/fundamentals-project-template/src/scss/layouts/footer.css">
+    <link rel="stylesheet" href="scss/main.css" />
+  </head>
+  <body>
+    <header>
+    <section id="name-content">
+    <section id="social-networks">
+        <a href="https://www.facebook.com/?locale=uk_UA">
+           <svg width="22" height="22">
+             <use href="/fundamentals-project-template/src/assets/sprite.svg#facebook"></use>
+           </svg>
+     </a>
+    <a href="https://x.com/?lang=uk">
+         <svg width="20" height="20">
+           <use href="/fundamentals-project-template/src/assets/sprite.svg#twitter"></use>
+         </svg>
+  </a>
+  <a href="https://www.instagram.com/">
+         <svg width="20" height="20">
+            <use href="/fundamentals-project-template/src/assets/sprite.svg#instagram"></use>
+           </svg>
+    </a>
+      </section>
+ 
+      <section id="logo">
+        <img src="/fundamentals-project-template/src/assets/img/logo.png" alt="logo">
+        </section>
+
+        <section id="user-block">
+        <a id="login">
+          <svg width="30" height="40">
+            <use href="/fundamentals-project-template/src/assets/sprite.svg#user"></use>
+          </svg>
+         </a>
+
+        <a id="open-cart" >
+            <span id="quantity-in-card" style="visibility: hidden;"></span>
+          <svg id="cart-icon"width="30" height="33">
+            <use href="/fundamentals-project-template/src/assets/sprite.svg#shopping-card"></use>
+          </svg>
+         </a>
+    </section>
+   </section>
+  
+    
+    <div id="line">
+      <svg width="1301" height="2">
+        <use href="/fundamentals-project-template/src/assets/sprite.svg#header-line"></use>
+      </svg>
+    </div>
+    <nav id="header-menu">
+        <a href="#home" data-page="home" id="home-page">Home</a>
+        <a href="#catalog" data-page="catalog" id="catalog">Catalog</a>
+        <svg width="12" height="8">
+             <use href="/fundamentals-project-template/src/assets/sprite.svg#arrow"></use>
+        </svg>
+        <a href="#about" data-page="about" id="about">About Us</a>
+        <a href="#contact" data-page="contact" id="contact">Contact Us</a>
+    </nav>
+ </section>
+ </div>
+
+    <div id="popup" style="display: none">
+    <div class="popup-content">
+      <form>
+        
+    <div id="wrapper-for-email">
+        <label for="email">Email address<span class="required-snow">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+    </div>
+
+    <div id="wrapper-for-password">
+        <label for="password">Password<span class="required-snow">*</span></label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <svg id="togle-password" widht="18" height="15">
+            <use href="/fundamentals-project-template/src/assets/sprite.svg#see"></use>
+         </svg>
+    </div>
+    <div id="wrapper-for-checkbox">
+        <input type="checkbox" for="remember" name="remember" id="remember" required>
+        <label for="remember" id="label-remember">Remember me</label>
+    </div>   
+        <a href="#" class="forgot-password">forgot your password?</a>
+        <button type="submit" id="login-button">log in</button>
+      </form>
+    </div>
+</header>
+
+    <main id="main-content" style="display: none;"></main>
+       <main id="home">
+
+      <section id="section">
+        <div id="smart-styles">
+          <h2>Smart Styles for<br />Every Destination</h2>
+          <p>
+            Phasellus risus turpis, pretium sit amet magna non, molestie
+            ultricies enim. Nullam pulvinar felis at metus.
+          </p>
+          <button id="view-all">View All Items</button>
+        </div>
+        <img src="/fundamentals-project-template/src/assets/img/hp.png" loading="lazy" alt="suitcase" />
+      </section>
+
+      <section id="discont-block">
+        <div id="article">
+          <div id="author">
+            <img
+              src="/fundamentals-project-template/src/assets/img/author.jpg"
+              alt="author"
+            />
+            <div id="author-info">
+              <span id="name">Lillian Bennett</span> <br />
+              Chief Marketing Officer
+            </div>
+            <h3>
+              Aliquam Faucibus Odionecom.
+            </h3>
+            <article>
+              Duis vestibulum elit vel neque pharetra vulputate. Quisque
+              scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin
+              molestie accumsan nulla sit. <br /><br />
+              Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque
+              scelerisque nisi urna.
+            </article>
+          </div>
+        </div>
+        <div id="photo-block">
+          <div id="text">
+            <div>25% discount</div>
+            <p>
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              imperdiet et leo in vulputate.
+            </p>
+            <button class="button">Get discount</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="travel-suitcases">
+        <h3>Travel suitcase</h3>
+        <p class="discription">Duis vestibulum elit vel neque pharetra</p>
+  
+        <div id="goods-block">
+          <div class="cases1">
+            <h6>Duis vestibulum elit vel neque.</h6>
+            <p>
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="cases2">
+            <h6>Neque vestibulum elit nequvel.</h6>
+            <p>
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="cases3">
+            <h6>Elituis stibulum elit velneque.</h6>
+            <p>
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="cases4">
+            <h6>Vel vestibulum elit tuvel euqen.</h6>
+            <p>
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+
+      <section class="block" >
+        <h3>Selected Products</h3>
+        <div class="discription">Duis vestibulum elit vel neque pharetra</div>
+        <div class="home-product-container" id="selected">
+        
+        </div>
+      </section>
+
+       <section id="offer-block">
+          <div>
+            <p id="offer">50%</p>
+            <p class="descr">Curabitur vulputate arcu odio, ac facilisis diam.</p>
+          </div>
+          <div id="left-side">
+            <p id="offer-month">Offer Of The Month</p>
+            <p class="descr">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              imperdiet et leo in vulputate.
+            </p>
+            <button id="get-offer">Get Offer Today</button>
+          </div>
+        </section>
+
+      <section class="block">
+        <h3>New Products Arrival</h3>
+        <div class="discription">Duis vestibulum elit vel neque pharetra</div>
+          <div class="home-product-container" id="new">
+    
+        
+        </div>
+      </section>
+
+      <section class="block" id="castomers-reviw">
+        <h3>Our Grateful Customers</h3>
+        <div class="description">Duis vestibulum elit vel neque pharetra</div>
+        <div id="customers">
+        <div class="customer-block">
+          <img src="/fundamentals-project-template/src/assets/img/customer1.jpg" loading="lazy" alt="Customer">
+          <p class="review">Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in vulputate. </p>
+          <p class="customer-name">Ethan Wade, New York</p>
+        </div>
+        <div class="customer-block">
+          <img src="/fundamentals-project-template/src/assets/img/customer2.jpg" loading="lazy" alt="Customer">
+          <p class="review">Curabitur vulputate arcu odio, ac 
+facilisis diam accumsan ut. Ut mperdiet 
+et leo in vulputate. </p>
+          <p class="customer-name">Jane Reyes, California</p>
+        </div>
+        <div class="customer-block">
+          <img src="/fundamentals-project-template/src/assets/img/customer3.jpg" loading="lazy" alt="Customer">
+          <p class="review">Curabitur vulputate arcu odio, ac 
+          <p class="review">Curabitur vulputate arcu odio, ac 
+facilisis diam accumsan ut. Ut mperdiet 
+et leo in vulputate. </p>
+          <p class="customer-name">Erica Banks, Miami</p>
+        </div>
+        </div>
+     </section>
+
+</main>
+    <footer>
+        <section id="section-benefits">
+           <h4>Our Benefits</h4>
+           <div class="benefits-block">
+            <img src="/fundamentals-project-template/src/assets/img/travel.png" alt="travel">
+            <p>Velit nisl sodales eget donec quis. volutpat orci.</p>
+           </div>
+           <div class="benefits-block">
+            <img src="/fundamentals-project-template/src/assets/img/track.png" alt="track">
+            <p>Dolor eu varius. Morbi fermentum velit nisl.</p>
+            </div>
+           <div class="benefits-block">
+            <img src="/fundamentals-project-template/src/assets/img/coins.png" alt="coins">
+            <p>Malesuada fames ac ante ipsum primis in faucibus.</p>
+           </div>
+           <div class="benefits-block">
+            <img src="/fundamentals-project-template/src/assets/img/education.png" alt="education">
+            <p>Nisl sodales eget donec quis. volutpat orci.</p>
+           </div>
+        </section>
+
+        <section id="footer-info-section">
+            <nav id="footer-menu">
+           <ul>
+                <li><a id="about-us-from-footer"><b>About Us</b></a></li>
+                    <li><a href="#">Organization</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Clients</a></li>
+                  
+            </ul>
+            <ul>
+                <li><a href="#"><b>Interesting links</b></a></li>
+                <li><a href="#">Photo galery</a></li>
+                <li><a href="#">Our team</a></li>
+                <li><a href="#">Socials</a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><b>Achievements</b></a></li>
+                <li><a href="#">Winnig Awards</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Our Amazing Clients</a></li>
+            </ul>
+            <div id="shipping">
+                <h5>Shipping information</h5>
+                <p>Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut sit amet erat nec nibh
+                    rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien,
+                    vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam.
+                </p>
+            </div>
+            </nav>
+            <div id="contact-footer">
+                <div>
+                <a id="contact-from-footer"><b>Contact Us</b></a>
+                <p>Bendum dolor eu varius. Morbi fermentum velitsodales
+                    egetonec. volutpat orci. Sed ipsum felis, tristique
+                    egestas et, convallis ac velitn consequat nec luctus.</p>
+                </div>
+                    <div id="contacts-info-footer">
+                    <div class="info">
+                    <svg width="24" height="24">
+                      <use href="/fundamentals-project-template/src/assets/sprite.svg#phone"></use>
+                    </svg><span>Phone: (+63) 236 6322</span>
+                    </div>
+                    <div class="info">
+                        <svg width="24" height="24">
+                         <use href="/fundamentals-project-template/src/assets/sprite.svg#email"></use>
+                        </svg><span>public@news.com</span>
+                    </div>
+                    
+                    <div class="info">
+                        <svg width="26" height="26">
+                          <use href="/fundamentals-project-template/src/assets/sprite.svg#watch"></use>
+                        </svg>
+                        <span>Sat - Sun: 10am - 6pm<br>
+                          Mon - Fri: 10am - 6pm</span>
+                    </div>
+                    <div class="info">
+                        <svg width="24" height="24">
+                            <use href="/fundamentals-project-template/src/assets/sprite.svg#map-pin"></use>
+                        </svg><span>639 Jade Valley,<br> Washington Dc</span>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <div id="copyright">© Copyright 2025</div>
+    </footer>
+    <script type="module" src="/fundamentals-project-template/src/js/main.js" defer></script>
+  </body>
+</html>

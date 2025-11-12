@@ -1,0 +1,253 @@
+@use '../abstracts/variables'as var;
+
+footer{
+    display: flex;
+    flex-direction: column;
+
+    #section-benefits{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 140px;
+        background-image: url("/fundamentals-project-template/src/assets/img/our-benefits-bg.png");
+        color: var.$white;
+
+    h4{
+        width: 100%;
+        text-align: start;
+        font-family: var.$fourth-font;
+        font-weight: 700;
+        font-size: 19px;
+        }
+
+    .benefits-block{
+        width: 25%;
+        text-align: center;
+        display: flex;
+        font-family: var.$secondary-font;
+        font-weight: 500;
+       font-size: 14px;
+
+    img{
+        width: 60px;
+        height: 60px;
+            }
+        }
+    }
+
+     #footer-info-section {
+         display: flex;
+         justify-content:space-between;
+         padding: 130px 130px 0;
+         font-family: var.$primary-font;
+         font-size: 15px;
+         font-weight: 400;
+         color: var.$black;
+
+    h5 {
+        font-weight: 700;
+        padding: 0 0 18px;
+        margin: 0;
+         }
+
+     #footer-menu{
+        display: flex;
+        width: 500px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        ul{
+          padding: 0;
+
+            :hover{
+                cursor: pointer;
+            }
+
+            li{
+                list-style: none; 
+                margin: 5px 0 0;
+
+        a{  
+            text-decoration: none;
+            color: var.$black;
+        }
+        }
+        }
+    
+    #shipping{
+        margin-top: 50px;
+            }
+        }
+
+    #contact-footer {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #contact-from-footer{
+            cursor: pointer;
+            
+        }
+
+    #contacts-info-footer {
+        display: flex;
+        flex-wrap: wrap;
+
+    .info {
+        width: 50%;
+        padding: 3% 0;
+        display: flex;
+        align-items: center;      
+
+    span{
+        display: inline-block;
+        padding: 0 5%;
+                    }
+                }
+            }}
+     }
+
+     #copyright {
+         text-align: center;
+         font-family: var.$third-font;
+         font-weight: 400;
+         font-size: 14px;
+         color: var.$light-grey;
+         padding-top: 110px;
+     }
+}
+
+@media screen and (width <= 1199px){
+   footer{
+    #section-benefits{
+        padding: 30px 80px;
+
+    h4{
+      padding-bottom: 20px;
+        font-weight: 400;
+        font-size: 17px;
+        }
+
+    .benefits-block{
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 1px;
+        
+    img{
+        width: 50px;
+        height: 50px;
+            }
+        }
+    }
+
+     #footer-info-section {
+         padding: 80px 80px 0;
+
+     #footer-menu{
+        width: 450px;
+
+    #shipping{
+        margin-top: 30px;
+
+        h5{
+            font-size: 15px;
+        }
+            }
+        }
+
+    #contact-footer {
+    #contacts-info-footer {
+        display: flex;
+        flex-direction: column;
+
+    .info {
+        width: 100%;        
+                }
+            }}
+     }
+} 
+}
+
+@media screen and (width <= 991px){
+footer{
+    #section-benefits{
+        padding: 10px;
+
+    h4{
+        padding-left: 20px;
+        font-size: 17px;
+        }
+
+    .benefits-block{
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+
+    img{
+    width: 60px;
+    height: 60px;
+            }
+        }
+    }
+
+     #footer-info-section {
+         padding: 10px 20px;
+         font-size: 15px;
+
+     #footer-menu{
+        width: 500px;
+        }
+    
+    #shipping{
+        margin-top: 50px;
+            }
+        }
+
+     #copyright {
+         padding-top: 50px;
+     }
+    }
+
+}
+
+@media (width <= 767px){
+    footer{
+    #section-benefits{
+        padding: 15px;
+
+    h4{
+        width: 100%;
+        font-size: 14px;
+        }
+
+    .benefits-block{
+        width: 25%;
+       font-size: 13px;
+
+    img{
+        width: 40px;
+        height: 40px;
+            }
+        }
+    }
+
+     #footer-info-section {
+        width: 75%;
+        margin: 15px auto;
+         flex-wrap: wrap;
+         justify-content:center;
+
+     #footer-menu{
+    #shipping{
+        margin-top: 30px;
+            }
+        }
+
+    #contact-footer {
+        width: 100%;
+        margin-top: 20px;
+}
+     }
+}
+ }

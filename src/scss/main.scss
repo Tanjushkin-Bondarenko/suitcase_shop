@@ -1,0 +1,756 @@
+@use "abstracts/variables"as var;
+@use "../scss/components/buttons";
+@use "base/fonts";
+@use "base/reset";
+@use "pages/about";
+@use "pages/cart";
+@use "pages/catalog";
+@use "pages/product-details";
+@use "pages/contact";
+
+
+#home {
+    margin: 0;
+    overflow-x: hidden;
+
+    #section {
+        display: flex;
+        align-items: center;
+        background-color: var.$white-grey;
+        padding: 0 10%;
+        height: 860px;
+
+        #smart-styles {
+            h2 {
+                font-size: 50px;
+                font-weight: 900;
+            }
+
+            p {
+                padding: 30px 0;
+                font-weight: 400;
+                font-size: 17px;
+                color: var.$grey;
+            }
+
+            #view-all:hover{
+                cursor: pointer;
+            }
+        }
+
+        img {
+            width: 44vw;
+            height: auto;
+        }
+    }
+
+    #discont-block {
+        display: flex;
+        background-color: var.$white;
+        margin: -10% auto 0;
+        width: 80%;
+        box-shadow: var.$box-shadow;
+        height: 566px;
+
+        #article {
+            width: 42%;
+            margin: 90px 90px 70px 76px;
+
+            #author {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                img {
+                    width: 85px;
+                    height: 93px;
+                }
+
+                #author-info {
+                    width: 200px;
+                    margin-left: 5%;
+                }
+
+                h3 {
+                    font-size: 40px;
+                }
+
+               article{
+                    font-weight: 400;
+                    font-size: 17px;
+                    color: var.$grey;
+                    line-height: 130%;
+                }
+
+                #name {
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        #photo-block {
+            background-image: url("/fundamentals-project-template/src/assets/img/hp2.png");
+            background-size: cover;
+            color: var.$white;
+            display: flex;
+            width: 60%;
+
+            #text {
+                width: 390px;
+                margin: 40% auto;
+
+            }
+
+            div {
+                font-size: 40px;
+                font-weight: 900;
+            }
+
+            p {
+                font-size: 17px;
+                font-weight: 400;
+            }
+
+            button {
+                width: 175px;
+                height: 60px;
+                font-size: 18px;
+            }
+
+        }
+    }
+
+    .block {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+    h3 {
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        }
+
+    .discription {
+        margin: 10px 0 50px;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+        color: var.$grey;
+        }
+    }
+
+    #travel-suitcases {
+        overflow-x: hidden;
+
+    h3{
+        margin: 100px 0 0;
+        text-align: center;
+        color: var.$black;
+    }
+
+    #goods-block {
+        display: flex;
+        justify-content: space-between;
+        font-size: 19px;
+        height: 600px;
+        gap: 10px;
+        will-change: transform;
+        transform: translateZ(0);
+        transition: transform 0.3s ease-in-out;
+
+    @for $i from 1 to 5{
+    .cases#{$i} {
+        background: center / cover no-repeat url("/fundamentals-project-template/src/assets/img/hp-travel#{$i}.png");
+        width: 24%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        color: var.$white;
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.4s ease;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgb(0 0 0 / 30%);        
+    }
+
+    h6 {
+        width: 170px;
+        font-weight: 700;
+        padding-bottom: 30px;
+            }
+
+    p {
+        width: 170px;
+        font-size: 17px;
+        font-weight: 400;
+        padding-bottom: 60px;
+            }
+    }
+    }
+}
+    }
+
+    .home-product-container{
+        margin: 110px auto 120px;
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+
+    .product {
+        justify-content: space-around;
+        aspect-ratio: 1;
+        scroll-snap-align: center; 
+        width: 24%;
+
+    .sale-button{
+        position: relative;
+        left:-30%;
+        width: 54px;
+        height: 28px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+        }
+
+       
+    }
+
+  #offer-block{
+           background-image: url("/fundamentals-project-template/src/assets/img/offer.jpg");
+           width: 80%;
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           height: 400px;
+           margin: 0 auto 120px;
+           justify-content: space-between;
+           align-items: center;
+           color: var.$white;
+
+    p{
+           text-align: center;
+    }
+
+    #offer{
+           font-size: 190px;
+           font-weight: 700;
+    }
+
+    .descr{
+           font-size: 20px;
+           font-weight: 400; 
+    }
+
+    #left-side{
+    #offer-month{
+          text-align: start;
+          font-size: 40px;
+          font-weight: 700;
+          padding-bottom: 30px;
+    }
+
+        .descr{
+           padding-bottom: 50px;
+           text-align: start;
+        }
+
+        #get-offer{
+           width: 200px;
+           font-size: 18px;
+        }
+    }
+ } 
+
+    #castomers-reviw{
+    #customers{
+        display: flex;
+        margin: 60px auto 120px;
+        text-align: center;
+        gap: 20px;
+
+.customer-block{
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        gap: 24px;
+        height: 440px;
+        margin: 40px auto;
+        border: 1px solid var.$white;
+        box-shadow: 0 20px 80px 0 #C1C7D4B3;
+        font-size: 17px;
+
+    img{
+        width: 98px;
+        height: 98px;
+         }
+
+    .review{
+        font-weight: 400;
+         }
+
+    .customer-name{
+        color: var.$pink;
+        font-weight: 700;
+         }
+        }
+    }}
+}
+
+@media screen and (width <= 1199px){
+#home {
+    #section {
+        height: 660px;
+
+        #smart-styles {
+            h2 {
+                font-size: 37px;
+            }
+        }
+
+        img {
+            width: 40vw;
+        }
+    }
+
+    #discont-block {
+        width: 90%;
+        height: 500px;
+
+    #article {
+        width: 42%;
+        margin: 20px 20px 50px 30px;
+
+    #author{
+    img {
+        width: 75px;
+        height: 83px;
+        }
+            
+    h3 {
+        padding-top:20px;
+        font-size: 20px;
+    }
+
+    article {
+        font-size: 15px;
+        }
+        }}
+
+    #photo-block {
+    div {
+        font-size: 30px;
+        padding-bottom: 10px;
+        }
+
+    p {
+        font-size: 15px;
+        padding-bottom: 10px;           
+    }
+        }
+    }
+
+    .block {
+        width: 90%;
+
+    h3 {
+        font-size: 30px;
+        }
+
+    .discription {
+        font-size: 15px;
+        }
+    }
+
+    #travel-suitcases {
+        margin: 50px 0;
+
+    #goods-block {
+        height: 500px;
+    }
+}
+    }
+
+    #selected,
+    #new {
+        margin: 110px auto 120px;
+
+    .product {
+        height: 400px;
+
+    .photo-sale-block{
+        height: 350px;
+
+        img{
+            height: 320px;
+        }
+
+    .sale-button{
+        bottom: 90%;
+        left:-30%;
+    }}
+        }
+    }
+
+    #offer-block{
+        width: 90%;
+        height: 400px;
+        margin: 0 auto 80px;
+
+    #offer{
+        font-size: 120px;
+    }
+
+    .descr{
+        font-size: 17px;
+    }
+
+    #left-side{
+    #offer-month{
+        font-size: 35px;
+    }
+
+    .descr{
+        padding-bottom: 30px;
+        }
+
+    #get-offer{
+        font-size: 17px;
+        }
+    }
+ } 
+
+    #castomers-reviw{
+    #customers{
+        margin: 40px auto 80px;
+
+        .customer-block{
+        gap: 18px;
+        height: 400px;
+        padding: 0 10px;
+        font-size: 15px;
+        } 
+    }}
+
+}
+
+@media screen and (width <= 991px){
+    #home {
+    #section {
+        padding: 0 10%;
+        height: 460px;
+
+        #smart-styles {
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                padding: 10px 0;
+            }
+
+        }
+
+        img {
+            width: 320px;
+            height: auto;
+        }
+    }
+
+    #discont-block {
+        display: flex;
+        flex-direction: column;
+        margin: -10% auto 0;
+        width: 70%;
+        height: fit-content;
+
+        #article {
+          width: 100%;
+            margin: 0;
+       
+            #author {
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+    img {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self: end;
+                }
+
+    #author-info {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-self: start;
+                }
+
+                h3 {
+                    grid-column: 1/3;
+                    grid-row: 2/3;
+                    font-size: 25px;
+                    justify-self: center;
+                }
+
+    article{
+        grid-column: 1/3;
+        grid-row: 3/4;
+        font-size: 18px;
+        padding: 20px;
+                }
+            }
+        }
+
+    #photo-block {
+        width: 100%;
+        height: 600px;
+        background-position: center center; 
+        background-size: cover;
+
+    #text{   
+         margin: 20% auto;
+
+    div {
+        font-size: 30px;
+        font-weight: 900;
+}
+
+p {
+        font-size: 17px;
+        font-weight: 400;
+            }
+
+    button {
+        width: 200px;
+            }}
+        }
+    }
+
+    .block {
+    h3 {
+        font-size: 25px;
+        }
+
+    .discription {
+        margin: 10px 0;
+        }
+    }
+
+    #travel-suitcases {
+        margin: 40px auto;
+
+    h3{
+        margin: 0;
+    }
+
+    #goods-block {
+        font-size: 17px;
+        height: 400px;
+
+ @for $i from 1 to 5{
+    .cases#{$i} {
+    p {
+      font-size: 14px;
+            }
+    }}}}
+
+    #selected,
+    #new {
+        margin: 40px auto;
+
+    .product {
+        flex: 1 0 33%;
+
+    .sale-button{
+        left: -35%;
+        bottom: 105%;
+    }
+        }
+    }
+
+  #offer-block{
+    width: 90%;
+        height: 200px;
+        margin: 0 auto;
+
+    #offer{
+           font-size: 70px;
+    }
+
+    .descr{
+           font-size: 17px;
+          
+    }
+
+    #left-side{
+    #offer-month{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .descr{
+           font-size: 17px;
+           padding-bottom: 10px;
+    }
+
+        #get-offer{
+        width: 150px;
+        font-size: 15px;
+        }
+ } 
+ } 
+
+    #castomers-reviw{
+        width: 90%;
+        margin: 0 auto;
+
+    #customers{
+                margin: 20px auto 70px;
+
+.customer-block{
+        width: 200px;
+       align-content: space-evenly;
+        gap: 14px;
+        height: 290px;
+        margin: 10px auto;
+        font-size: 15px;
+
+          img{
+            width: 70px;
+            height: 70px;
+          }
+        }
+    }}
+}
+}
+
+ @media (width <= 767px) {
+     #home {
+    #section {
+        height: 360px;
+
+        #smart-styles {
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                 font-size: 18px;
+            }
+
+        }
+
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    #discont-block {
+        #article {
+            #author {
+    #author-info {
+        font-size: 14px;
+
+            #name{
+                font-size: 18px;
+            }
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+    article{
+        font-size: 14px;
+        padding: 10px;
+                }
+            }
+        }
+
+    #photo-block {
+        width: 100%;
+        height: 400px;
+
+    #text{   
+    div {
+        font-size: 20px;
+        font-weight: 700;
+}
+
+p {
+        font-size: 16px;
+            }
+
+    button {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+            }}
+        }
+    }
+
+    .block {
+    h3 {
+        font-size: 20px;
+        }
+
+    .discription {
+        margin: 10px 0;
+        }
+    }
+
+    #travel-suitcases {
+        display: none;
+}
+
+    #selected,
+    #new {
+        margin: 20px auto;
+    }
+
+  #offer-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+    #offer{
+           font-size: 30px;
+    }
+
+    .descr{
+          display: none;
+    }
+
+    #left-side{ 
+        text-align: center;
+
+    #offer-month{
+        padding-bottom: 10px;
+    }
+
+        #get-offer{
+        width: 150px;
+        height: 30px;
+        }
+ } 
+ } 
+
+    #castomers-reviw{
+    #customers{
+                margin: 20px auto;
+
+.customer-block{
+        font-size: 13px;
+
+          img{
+            width: 70px;
+            height: 70px;
+          }
+        }
+    }}
+}
+}

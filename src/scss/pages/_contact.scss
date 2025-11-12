@@ -1,0 +1,318 @@
+@use "../abstracts/variables"as var;
+@use "../components/forms";
+
+#contact {
+    #contact-bunner {
+        margin-bottom: 130px;
+        background-image: url("/fundamentals-project-template/src/assets/img/contact-bg.jpg");
+        height: 554px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+        h2 {
+            font-size: 50px;
+            font-weight: 900;
+            color: var.$white;
+        }
+
+        p {
+            width: 288px;
+            font-size: 17px;
+            font-weight: 400;
+            color: var.$white;
+        }
+    }
+
+    #contacts-info {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 230px;
+            height: 180px;
+
+            h6 {
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+    }
+
+    #feedback {
+        width: 80%;
+        margin: 130px auto 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        img {
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h4 {
+                font-weight: 900;
+                font-size: 25px;
+            }
+
+            p {
+                margin: 30px 0;
+                font-weight: 400;
+                font-size: 17px;
+            }
+
+            label{
+                font-weight: 700;
+                font-size: 20px;
+
+                .dot {
+                    color: #B92770;
+
+                }
+            }
+
+            input,
+            #message {
+                display: block;
+                border: 2px solid #B92770;
+                margin-bottom: 30px;
+            }
+
+            input {
+                height: 44px;
+            }
+            
+
+            #form-btn {
+                height: 40px;
+                width: 90px;
+
+            }
+        }
+    }
+}
+
+@media screen and (width <= 1199px){
+  #contact {
+    #contact-bunner {
+        margin-bottom: 80px;
+        height: 450px;
+
+    h2 {
+        font-size: 45px;
+        }
+
+    p {
+        width: 400px;
+        }
+    }
+
+    #contacts-info {
+        width: 90%;
+    }
+
+#feedback {
+        width: 90%;
+        margin: 80px auto;
+
+    form {
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        margin: 10px 0;
+        font-size: 15px;
+            }
+
+    label{
+        font-size: 17px;
+            }
+
+    input,
+    #message {
+        margin-bottom: 20px;
+        }
+
+    input {
+        height: 40px;
+        }
+        }
+    }
+}
+    
+}
+
+ @media (width <= 991px){
+    #contact {
+    #contact-bunner {
+        margin-bottom: 50px;
+        height: 250px;
+
+        h2 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        p {
+            width: 400px;
+            font-weight: 400;
+                }
+    }
+
+    #contacts-info {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .card {
+            justify-content: space-evenly;
+            width: 350px;
+
+            h6 {
+                font-size: 17px;
+            }
+        }
+    }
+
+    #feedback {
+        margin: 70px auto;
+        grid-template-columns: 1fr;
+
+        img {
+            display: none;
+        }
+
+        form {
+            h4 {
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            label{
+               font-size: 17px;
+            }
+
+            input,
+            #message {
+                margin-bottom: 20px;
+            }
+
+            input {
+                height: 34px;
+            }
+    
+            #form-btn {
+                height: 30px;
+                width: 140px;
+            }
+        }
+    }
+}
+ }
+
+ @media (width <= 767px) {
+    #contact {
+        #contact-bunner {
+            width: 100%;
+            background-color: var.$white-grey;
+            margin-bottom: 25px auto;
+            background-image: none;
+            height: 100px;        
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var.$black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            width: 70%;
+            font-size: 15px;
+            font-weight: 400;
+            color: var.$black;
+        }
+    }
+
+    #contacts-info {
+        .card {
+            width: 250px;
+            height: 150px;
+
+            h6 {
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    #feedback {
+        width: 70%;
+        margin: 20px auto ;
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        img {
+            width: 100%;
+        }
+
+        form {
+            h4 {
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            p {
+                margin: 10px 0;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            label{
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            input,
+            #message {
+                margin-bottom: 30px;
+            }
+
+            input {
+                height: 30px;
+            }
+            
+            #form-btn {
+                height: 30px;
+            }
+        }
+    }
+}
+ }

@@ -1,0 +1,411 @@
+@use "../abstracts/variables"as var;
+
+
+#catalog-section {
+    width: 90%;
+    margin: 35px auto 120px;
+
+#showing-pages {
+    font-weight: 400;
+    font-size: 16px;
+    color: var.$grey;
+}
+
+#sort-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: 400;
+
+    #filters {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin: 10px auto;
+
+    #filters-parametr{
+        display: flex;
+        border: 2px solid var.$pink;
+        border-left: none;
+        border-right: none;
+
+    .filter-cart{
+        width: 250px;
+        margin: 0 20px;
+
+    .filters-input{
+        width: 250px;
+        margin: 20px 0;          
+    }}}
+
+    #clear-hide{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        justify-content: flex-start;
+
+    button{
+        width: 220px;
+        text-transform: uppercase;
+      
+         }
+     }
+}
+
+    .filter {
+    position: relative;
+    display: block;
+    padding: 4px 12px;
+    background-color: var.$white;
+    color: var.$grey;
+    cursor: pointer;
+          
+    .dropdown{
+        position: absolute;
+        display: none;
+        list-style: none;
+        background: var.$white;
+        color: var.$grey;
+        border: 1px solid var.$white;
+        margin: 0;
+        padding: 5px 0;
+        width: 150px;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+
+    li{
+        padding: 5px;
+    cursor: pointer;
+     }
+
+    li:hover{
+        background: #eee;
+        }
+        }
+    }
+
+    .filter:hover {
+    .dropdown{
+         display: block;
+        }}
+
+    .active{
+        color: var.$white;
+        background-color: var.$pink;
+    }
+
+#searching{
+        height: 40px;
+
+#searching-field{
+#search{
+        display: block;
+        height: 40px;
+        width: 300px;
+}
+
+#search-mark{
+        position: relative;
+        top: -1.7vw;
+        right: -18vw;       
+                }
+            }
+        }
+    }
+      
+#product-list {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+   
+
+#list-section{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+#list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+    margin-bottom: 50px;
+
+    .product{
+        flex: 1 0 30%;
+        
+    } 
+       }
+
+    #page-info{
+       text-align: center;
+
+    span{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+       }
+
+       .active-page{
+        color: var.$white;
+        background-color: var.$pink;
+       }
+       }
+     }
+
+#best-sets{
+    width: 25%;
+  
+    h3{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 23px;
+    }
+
+    .card{
+        width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+
+    img{
+    width: 90px;
+    height: 90px;
+            }
+
+    p{
+    font-size: 13px;
+    font-weight: 400;
+                }
+
+    .rating-goods {
+    margin: 7px 0;
+    display: flex;
+
+    svg{
+    height: 10px;
+    width: 10px;           
+ }
+                 }
+            }
+        }
+}
+}
+
+@media screen and (width <= 1199px){
+    #catalog-section {
+    width: 90%;
+    margin: 30px auto 80px;
+
+#sort-block {
+    font-size: 15px;
+
+    #filters {
+    #filters-parametr{
+    .filter-cart{
+    .filters-input{
+        width: 180px;             
+    }
+}}
+
+    #clear-hide{
+        margin-top: 20px;
+
+     }
+}
+
+    .filter {
+    .dropdown{
+        width: 130px;   
+    }
+    }
+
+#searching{
+#searching-field{
+#search{
+        display: block;
+        height: 40px;
+        width: 180px;
+}
+
+#search-mark{
+    top: -2.5vw;
+    right: -13vw;       
+                }
+            }
+        }
+    }
+      
+#product-list {
+    justify-content: center;
+
+#list-section{
+#list{
+    width: 800px;
+       }
+     }
+
+#best-sets{
+    width: 220px;
+
+    h3{
+    font-size: 15px;
+    margin-bottom: 18px;
+    }
+
+    .card{
+    img{
+    width: 85px;
+    height: 85px;
+            }
+      
+    p{
+        font-size: 12px;
+            }
+
+    .rating-goods {
+    margin: 5px 0;
+
+    svg{
+    height: 8px;
+    width: 8px;           
+ }}}}}}}
+
+ @media (width <= 991px){
+#catalog-section {
+#showing-pages {
+    font-size: 13px;
+}
+
+#sort-block {
+    font-size: 13px;
+
+    #filters {
+        gap: 8px;
+        margin: 5px auto;
+
+    #filters-parametr{
+    .filter-cart{
+        width: 130px;
+        margin: 0 10px;
+
+    .filters-input{
+        width: 130px;
+        margin: 10px 0;          
+    }}}
+
+    #clear-hide{
+        gap: 5px;
+        margin-top: 10px;
+        justify-content: space-around;
+     }
+}
+
+    .filter {
+    .dropdown{
+        width: 120px;
+        }
+    }
+
+#searching{
+        height: 26px;
+
+#searching-field{
+#search{
+        height: 24px;
+        width: 130px;
+}
+
+#search-mark{
+        top: -2.1vw;
+        right: -11vw;      
+                }
+            }
+        }
+    }
+      
+#product-list {
+    margin-top:10px;
+    flex-direction: column;
+
+#list-section{
+     width: 100%;
+    align-items: center;
+
+#list{
+    margin-bottom: 20px;
+       }
+
+    #page-info{
+    span{
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+       }
+       }
+     }
+
+    #best-sets{
+        display: none;
+}
+}
+ }
+
+@media (width <= 767px){
+#catalog-section {
+    margin: 10px auto;
+
+    #showing-pages {
+    font-size: 11px;
+}
+
+    #sort-block {
+        font-size: 11px;
+        font-weight: 400;
+
+        #filters {
+            gap: 8px;
+            margin: 5px auto;
+
+        #filters-parametr{
+        .filter-cart{
+        .filters-input{
+            margin: 5px 0;          
+    }}}
+
+        #clear-hide{
+            margin-top: 0;
+
+        button{
+            width: 150px;
+       }
+     }
+}
+
+    #searching{
+        height:24px;
+
+        #searching-field{
+        #search{
+            display: block;
+            height: 20px;
+            width: 120px;
+}
+
+        #search-mark{
+            top: -2.4vw;
+            right: -13vw;    
+                }
+            }
+        }
+    }
+      
+}
+}
+  }

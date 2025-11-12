@@ -1,0 +1,71 @@
+<body>
+    <div id="contact">
+        <section id="contact-bunner">
+            <h2>Contact Us</h2>
+            <p>Duis vestibulum elit vel neque pharetra vulputate. Duis rutrum non risus in imperdiet.</p>
+        </section>
+
+        <section id="contacts-info">
+            <div class="card">
+                <svg height = "62" weight="62">
+                      <use href="/fundamentals-project-template/src/assets/sprite.svg#contact-map">
+                </svg>
+                <h6>Our Location</h6>
+                <p>1234 NW Bobcat Lane, St. Robert, MO 65584-5678</p>
+            </div>
+            <div class="card">
+             <svg height="62" weight="62">
+                <use href="/fundamentals-project-template/src/assets/sprite.svg#contact-time"></use>
+             </svg>
+             <h6>Operating Time</h6>
+             <p>Monday - Friday: 9am - 6 pm<br>
+             Weekends: 10:30 am - 6pm</p>
+            </div>
+            <div class="card">
+              <svg height="65" weight="65" >
+                <use href="/fundamentals-project-template/src/assets/sprite.svg#contact-email"></use>
+              </svg>
+              <h6>Our Email</h6>
+              <p>best@shop.com<br>
+              info@bestshop.com</p>
+            </div>
+            <div class="card">
+                 <svg height="62" widht="62">
+                    <use href="/fundamentals-project-template/src/assets/sprite.svg#contact-phone">
+                 </svg>
+                 <h6>Call Us</h6>
+                 <p>(268)142-8413<br>
+                 (760)265-2917</p>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <img src="/fundamentals-project-template/src/assets/img/fb-picture.jpg" alt="feedback" loading="lazy">
+   
+            <form id="form-contact">
+                <h4>Your Feedback Is Much Appreciated!</h4>
+                <p>We will contact you when you complete the following form!</p>
+                <label for="name">Your name<span class="dot">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+                <label for="email">Your email address<span class="dot">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                 required>                
+                <label for="topic">Topic<span class="dot">*</span> </label>
+                <input type="text" name="topic" id="topic" autocomplete="name" required>
+           
+            <label for="message">Your message<span class="dot">*</span></label>
+            <textarea id="message" name="message" rows="4" autocomplete="name"></textarea>
+            
+            <button id="form-btn" type="submit">Send</button>
+            <span id="success-message" style="display: none;">Your feedback has been successfully sent.</span>
+   
+            </form>
+        </section>
+    </div>
+</body>
+
+
+
+
+
