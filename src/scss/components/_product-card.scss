@@ -20,23 +20,29 @@
     height: 400px;
     width: 100%;
 }
+
         .sale{
     @extend .sale;
+
     bottom: 105%;
     left: -31%;
+
     @extend .secondary-font;
 }
 
         }
+
     .photo-sale-block:hover{
         cursor: pointer;
     }
+
     h6{
         font-weight: 700;
         font-size: 19px;
         text-align: center;
           height: 50px;
     }
+
     h6:hover{
         cursor: pointer;
     }

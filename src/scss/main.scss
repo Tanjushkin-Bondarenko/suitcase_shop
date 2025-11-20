@@ -32,7 +32,9 @@
 
             p {
                 padding: 30px 0;
+
                 @extend .secondary-font;
+
                 color: var.$grey;
             }
 
@@ -80,6 +82,7 @@
 
                article{
                    @extend .secondary-font;
+
                     color: var.$grey;
                     line-height: 130%;
                 }
@@ -133,7 +136,9 @@
 
     .discription {
         margin: 10px 0 50px;
+
         @extend .secondary-font;
+
         text-align: center;
         color: var.$grey;
         }
@@ -159,7 +164,9 @@
         transition: transform 0.3s ease-in-out;
 
     @for $i from 1 to 5{
-    .cases#{$i} {
+    .cases#{$i}
+
+ {
         background: center / cover no-repeat url("/src/assets/img/hp-travel#{$i}.png");
         width: 24%;
         height:100%;
@@ -184,7 +191,9 @@
 
     p {
         width: 170px;
+
         @extend .secondary-font;
+
         padding-bottom: 60px;
             }
     }
@@ -206,7 +215,9 @@
 
     .sale-button{
         left:-30%;
+
         @extend .sale;
+
         font-size: 12px;
     }
     }
@@ -537,7 +548,9 @@ p {
         height: 400px;
 
  @for $i from 1 to 5{
-    .cases#{$i} {
+    .cases#{$i}
+
+ {
     p {
       font-size: 14px;
             }

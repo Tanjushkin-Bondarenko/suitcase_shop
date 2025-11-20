@@ -20,7 +20,9 @@
 
         p {
             width: 288px;
+
             @extend .secondary-font;
+
             color: var.$white;
         }
     }
@@ -74,6 +76,7 @@
 
             p {
                 margin: 30px 0;
+
                 @extend .secondary-font;
             }
 

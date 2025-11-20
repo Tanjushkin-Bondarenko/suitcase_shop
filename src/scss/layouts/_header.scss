@@ -18,29 +18,35 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .social-networks{
             svg{
                 width: 20px;
                 height: 20px;
             }
         }
+
         .social-networks,
         #user-block{
             height: 50px;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+
             svg{
                 display: inline-block;
             }
         }
+
         #user-block{
             svg{
                 width: 30px;
                 height: 30px}
+
         #login{
             width: max-content;
             text-decoration: none;
+
         &:hover{
             cursor: pointer;
         } 
@@ -68,10 +74,12 @@ header{
     }
        
         }
+
     #logo:hover{
         cursor: pointer;
     }
     }
+
     #line{
         height: 4px;
         margin: 0 auto;
@@ -81,11 +89,13 @@ header{
              height: 3px;
         }
       }
+
     nav{
     #hamburger {
         display: none;
     
     }
+
     #header-menu {
         display: flex;
         justify-content: center;
@@ -101,9 +111,11 @@ header{
             color: var.$black;
             
         }
+
         a:hover{
             color: var.$pink;
         }
+
         .active-menu{
             color: var.$pink;
         }
@@ -111,11 +123,13 @@ header{
        .catalog-menu{
            display: flex;
            align-items: center;
+
            a{
             padding-right: 0.5rem;
            }
         } 
     }
+
     .menu-sn{
         display: none;
     }
@@ -214,6 +228,7 @@ header{
     
 #popup{
     width: 300px;
+
    .popup-content{
     margin: 10px auto;
                 
@@ -243,15 +258,18 @@ header{
                 width: 800px;
             }
         }
+
  #popup{
         width: 250px;
         top: 43%;
         left: 74%;
+
     .popup-content{           
     form{
         input{
         margin-bottom: 5px;
         }
+
     #wrapper-for-password{
         #togle-password{
         left: 12.5rem;
@@ -262,9 +280,11 @@ header{
         #wrapper-for-checkbox{
             grid-row: 3/4;
         } 
+
         .forgot-password{
             grid-row: 4/5;
          }  
+
         #wrapper-for-checkbox, 
         .forgot-password{
             grid-column: 1/3;
@@ -295,9 +315,11 @@ header{
         display: flex;
         justify-content: space-between;
         margin: 0;
+
         .main-sv{
             display: none;
         }
+
         #user-block{
             display: flex;
             align-items: center;
@@ -307,11 +329,13 @@ header{
                 height: 25px;
                 width: 25px;
             }
+
             #open-cart{
                  #quantity-in-card{
         font-size: 9px;
            left: 86%; 
             }
+
             #cart-icon{
                 height: 20px;
                 position: relative;
@@ -331,9 +355,11 @@ header{
         
    
         }
+
   #line{
     display: none;
   }
+
     #header-menu{
         background-color: var.$white-grey;
         height: 100vh;
@@ -354,14 +380,17 @@ header{
            svg{
                 display: none;
            }
+
             a{
                 font-size: 16px;
             }
       
         }
+
         .menu-sn{
             display: flex;
             gap:0.5rem;
+
             svg{
                 width: 22px;
                 height: 22px;
@@ -370,9 +399,11 @@ header{
         }
         
     }
+
     #header-menu.active{
         left: 0;
       }
+
     .hamburger {
         display: flex;
        flex-direction: column;
@@ -395,21 +426,26 @@ header{
         transition: .3s ease;
 
     } 
+
     span:nth-child(1){
         top: 25%;
     }
+
     span:nth-child(3){
         top: 75%;
     }
   }
+
   .hamburger.active{
     span:nth-child(1){
         top:50%;
         transform: translate(-50%, -50%) rotate(45deg);
     }
+
     span:nth-child(2){
         opacity: 0;
     }
+
     span:nth-child(3){
         top: 50%;
         transform: translate(-50%, -50% ) rotate(135deg);
@@ -426,9 +462,11 @@ header{
             label{
                 font-size: 12px;
         }
+
             input{
                 margin-bottom: 0;
         }
+
         #wrapper-for-password{
          #togle-password{
             top: -32%;

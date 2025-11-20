@@ -99,7 +99,9 @@ export function buildBestSetsProducts(item) {
 
   const bestSetsSection = document.querySelector("#best-sets");
   if(item.category === "luggage sets") {
- if(bestSetsSection.querySelectorAll(".best-set-card").length == 5)return    
+ if(bestSetsSection.querySelectorAll(".best-set-card").length == 5){
+  return
+ }    
 
       const card = document.createElement("div");
       card.classList.add("best-set-card");

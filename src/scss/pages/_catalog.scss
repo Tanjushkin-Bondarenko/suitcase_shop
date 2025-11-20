@@ -138,6 +138,7 @@
 
         .product{
         flex: 1 0 30%;
+
             .photo-sale-block{
                 .sale{
                 left: 6%;
@@ -148,6 +149,7 @@
    
      }
     }
+
 #best-sets{
     width: 25%;
   
@@ -162,21 +164,25 @@
     display: grid;
     gap: 10px;
     margin-bottom: 5px;
+
    &:hover{
     cursor: pointer;
    }
+
     .best-set-img{
      grid-column: 1/2;
       grid-row: 1/5;
     width: 90px;
     height: 90px;
             }
+
     .best-set-description{
         grid-column: 2/3;
         grid-row: 1/2;
             }
  
     }
+
     .best-set-rating {
     display: flex;
     grid-column: 2/3;

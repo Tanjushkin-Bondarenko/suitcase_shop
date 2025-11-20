@@ -40,7 +40,9 @@ footer{
          justify-content:space-between;
          padding: 130px 130px 0;
          font-family: var.$primary-font;
+
          @extend .secondary-font;
+
          color: var.$black;
 
     h5 {

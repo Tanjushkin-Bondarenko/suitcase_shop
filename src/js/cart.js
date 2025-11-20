@@ -118,12 +118,12 @@ function buildProductInCart(productData){
   buttonAdd.textContent = "+";
 
   buttonAdd.addEventListener("click", ()=>{
-    increase(productQuantity, total, quantityInCard, productData, products)}) 
+    increase(productQuantity, total, quantityInCard, productData)}) 
 
   const buttonSub = document.createElement("button");
   buttonSub.textContent="-";
   buttonSub.addEventListener("click", ()=>{
-    decrease(productQuantity, total, quantityInCard, productData, products)})
+    decrease(productQuantity, total, quantityInCard, productData)})
         
   quantityDiv.append(buttonSub);
   quantityDiv.append(productQuantity);
