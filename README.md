@@ -43,21 +43,6 @@
 8. Build for prodaction
    `npm run build`   
 
-## Project Structure
-
-project/
-│
-|               
-├── src/                # HTML, JS, images, static assets
-│   ├── index.html
-│   ├── js/
-│   ├── assets/
-|   ├── scss/           # All SCSS partials + main.scss
-|   ├── html/
-|   └──  dist/main.css      # Compiled CSS output
-|  
-│
-└── package.json
 
 ## Requirements: 
 1. Node.js(v 14+ recomened)
