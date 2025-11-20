@@ -1,4 +1,5 @@
 @use "../abstracts/variables"as var;
+@use "../abstracts/mixins";
 
 
 #cart{
@@ -7,7 +8,7 @@
     width: 100%;
 
     #card-bg{
-        background: no-repeat center/100% url("/fundamentals-project-template/src/assets/img/cart-bg.png");
+        background: no-repeat center/100% url("/src/assets/img/cart-bg.png");
         margin: 10px 0;
         height: 200px;
 
@@ -69,8 +70,7 @@
                 border-right: none;
                 padding: 10px;
                 font-family: var.$fourth-font;
-                font-weight: 700;
-                font-size: 18px;
+                @extend .secondary-font;
 
                 .product-name{
                 width: 150px;
@@ -124,7 +124,7 @@
     }
 
   #cart-buttons{
-    display: grid;
+            display: grid;
             width: 80%;
             margin: 15px auto 120px;
             justify-content: space-between;
@@ -132,6 +132,7 @@
             button{
                 grid-row: 1/2;  
                 text-transform: uppercase; 
+                width: 230px;
             }
 
              #total-sum-block{
@@ -240,13 +241,7 @@
         width: 90%;
         margin: 15px auto 80px;
            
-    // button{
-    //     width: 160px;
-    //     height: 50px;   
-    //     font-size: 12px;
-    //     font-weight: 500;
-    // }
-
+   
     #total-sum-block{
         font-size: 15px;
         font-weight: 500;

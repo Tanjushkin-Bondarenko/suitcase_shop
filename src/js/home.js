@@ -1,5 +1,9 @@
 import { createPath } from "./main.js";
 import { createButton, buildCard } from "./product.js";
+import {showProducts} from "./catalog.js";
+import { checkValidityEmail } from "./contact.js";
+import { aboutHandler } from "./about.js";
+import { viewProduct } from "./product-card.js";
 
 const slides = document.querySelector("#goods-block");
 let position =0
@@ -13,9 +17,7 @@ document.querySelector("#logo").addEventListener("click", ()=>logohendler(mainCo
 document.querySelector("#login").addEventListener("click", showLoginWindow)
     
    
-document.querySelector("#about-us-from-footer").addEventListener("click", ()=>{
-    loadPage("about")
-    showActivePage("about")})
+
     
 document.querySelector("#contact-from-footer").addEventListener("click", ()=>{
     loadPage("contact")
@@ -36,16 +38,17 @@ export async function loadPage(page) {
     await createPath(page, mainContent)
     
   }
-//   if(page=="catalog")showProducts()
+  if(page=="catalog"){
+    showProducts();
+  ;
+  }
   if(page =="about"){
-    document.querySelector("#see-all").addEventListener("click", ()=>{
-      loadPage("catalog")
-      showActivePage("catalog")
-    }) }
-//   if(page=="contact")checkValidityEmail()
+    document.querySelector("#see-all").addEventListener("click", aboutHandler)
+  }
+  if(page=="contact")checkValidityEmail()
   
 }
-function showActivePage(val){
+export function showActivePage(val){
   let menuItems = document.querySelectorAll("#header-menu a")
   for(let item of menuItems)item.classList.remove("active-menu");
   document.querySelector(`#${val}`).classList.add("active-menu")
@@ -106,7 +109,7 @@ export function buildProducts(url){
           let productCard = buildCard(item)
           productCard.append(addToCardBtn)
           document.querySelector("#selected").append(productCard);
-        //   addToCardBtn.addEventListener("click", (e)=>viewProduct(e.target.parentElement.dataset.id))
+          addToCardBtn.addEventListener("click", (e)=>viewProduct(e.target.parentElement.dataset.id))
         }
         if (item.blocks.includes("New Products Arrival")) {
           const addToCardBtn = createButton()
@@ -115,10 +118,12 @@ export function buildProducts(url){
           let productCard = buildCard(item)
           productCard.append(addToCardBtn)
           document.querySelector("#new").append(productCard);
-        //   addToCardBtn.addEventListener("click", (e)=>{
-        //     viewProduct(e.target.parentElement.dataset.id)})
+          addToCardBtn.addEventListener("click", (e)=>{
+            viewProduct(e.target.parentElement.dataset.id)})
         }
       });  
     })
 
 }
+
+

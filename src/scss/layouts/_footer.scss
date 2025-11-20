@@ -1,4 +1,5 @@
-@use '../abstracts/variables'as var;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 footer{
     display: flex;
@@ -8,7 +9,7 @@ footer{
         display: flex;
         flex-wrap: wrap;
         padding: 40px 140px;
-        background-image: url("/fundamentals-project-template/src/assets/img/our-benefits-bg.png");
+        background-image: url("/src/assets/img/our-benefits-bg.png");
         color: var.$white;
 
     h4{
@@ -39,8 +40,7 @@ footer{
          justify-content:space-between;
          padding: 130px 130px 0;
          font-family: var.$primary-font;
-         font-size: 15px;
-         font-weight: 400;
+         @extend .secondary-font;
          color: var.$black;
 
     h5 {
@@ -124,8 +124,8 @@ footer{
 
     h4{
       padding-bottom: 20px;
-        font-weight: 400;
-        font-size: 17px;
+       font-size: 17px;
+       font-weight: 400;
         }
 
     .benefits-block{

@@ -11,6 +11,7 @@ button{
     border: none;
 }
 
+
 button:hover{
     cursor: pointer;        
 }
@@ -47,7 +48,6 @@ button:hover{
         width: 150px;
         font-family: var.$fourth-font; 
     }
-
 
 @media screen and (width <= 1199px){
      button{

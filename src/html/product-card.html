@@ -1,0 +1,231 @@
+<body>
+  <main id="product-cart">
+    <section id="product">
+        <img id="main-img" alt="suitcases" loading="lazy"/>
+        <div id="aditional-photos">
+          <img
+            src="/src/assets/img/product-photo1.jpg"
+            alt="suitcase"
+            loading="lazy"
+          />
+          <img
+            src="/src/assets/img/product-photo2.jpg"
+            alt="suitcase"
+             loading="lazy"
+          />
+          <img
+            src="/src/assets/img/product-photo3.jpg"
+            alt="suitcase"
+             loading="lazy"
+          />
+          <img
+            src="/src/assets/img/product-photo4.jpg"
+            alt="suitcase"
+             loading="lazy"
+          />
+        </div>
+        <p id="product-details-title"></p>
+        <div id="rating">
+          <p id="stars-rating"></p>
+          <span id="clients-review"></span>
+        </div>
+        <div id="price"></div>
+        <p id="description">
+          The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining
+          of travel essentials, designed to elevate every journey. Made with at
+          least 30% recycled materials, its lightweight yet impact-resistant
+          shell combines eco- conscious innovation with rugged durability.
+          <br/>
+           <br/>
+           The ergonomic handle and GlideMotion spinner wheels ensure effortless
+          mobility while making a statement in sleek design. Inside, the modular
+          compartments and adjustable straps keep your belongings secure and
+          neatly organized, no matter the destination.
+        </p>
+         <label for="size">Size 
+         <br/>
+        <select name="size" id="size" class="list">
+           <option value="">choose option</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="S-L">S-L</option>
+          <option value="S, M, L">S, M, L</option>
+        </select>
+        <span class="error" style="display: none;">Please, choose option</span>
+       </label>
+        <label for="color">Color<br/>
+        <select name="color" id="color" class="list">
+          <option value="">choose option</option>
+          <option value="red">red</option>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+          <option value="black">black</option>
+          <option value="grey">grey</option>
+          <option value="yellow">yellow</option>
+          <option value="pink">pink</option>
+        </select>
+        <span class="error" style="display: none;">Please, choose option</span>
+
+       </label>
+        <label for="category">Category<br/>
+        <select name="category" id="category" class="list">
+          <option value="">choose option</option>
+          <option value="carry-ons">carry-ons</option>
+          <option value="suitcases">suitcases</option>
+          <option value="luggage sets">luggage sets</option>
+          <option value="kids' luggage">kids' luggage</option>
+        </select>
+        <span class="error" style="display: none;">Please, choose option</span>
+
+      </label>
+          <div id="quantity-block">
+            <button id="add">+</button>
+            <div id="quantity">1</div>
+            <button id="subtract">-</button>
+          </div>
+          <button id="add-to-cart">Add To Cart</button>
+        <div id="payment-methods">
+          <p>Payment:</p>
+          <svg height="20" width="60">
+            <use href="/src/assets/sprite.svg#visa"></use>
+          </svg>
+          <svg height="20" width="61">
+            <use
+              href="/src/assets/sprite.svg#american-express"
+            ></use>
+          </svg>
+          <svg height="22" width="61">
+            <use href="/src/assets/sprite.svg#mc"></use>
+          </svg>
+          <svg height="20" width="61">
+            <use
+              href="/src/assets/sprite.svg#payPall"
+            ></use>
+          </svg>
+        </div>
+    </section>
+    <section id="product-detais">
+      <div id="product-detais-btns">
+        <button id="details" class="active-button">details</button>
+        <button id="reviews" >reviews</button>
+        <button id="shipping-policy">shipping policy</button>
+      </div>
+      <p id="details-block" class="prod-info">
+        Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
+        mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet.
+        Etiam a ex at ante tincidunt imperdiet. Nunc congue ex vel nisl viverra,
+        sit amet aliquet lectus ullamcorper. Praesent luctus lacus non lorem
+        elementum, eu tristique sapien suscipit. Sed bibendum, ipsum nec viverra
+        malesuada, erat nisi sodales purus, eget hendrerit dui ligula eu enim.
+        Ut non est nisi. 
+        <br/>
+        Pellentesque tristique pretium dolor eu commodo. Proin
+        iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit
+        amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet
+        sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis
+        pharetra, facilisis quam. Proin iaculis nibh vitae lectus mollis
+        bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti.
+        Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra
+        dui auctor, ullamcorper turpis pharetra, facilisis quam. Proin iaculis
+        nibh vitae lectus mollis bibendum.
+        <br/>
+         Quisque varius eget urna sit amet
+        luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet sodales
+        risus. Pellentesque viverra dui auctor, ullamcorper turpis pharetra,
+        facilisis quam.
+      </p>
+      <div id="reviews-block" class="prod-info" style="display: none;"> 
+        <div id="review-about-product">
+          <div id="review-block">
+            <img id="customer-photo" src="/src/assets/img/customer-photo.jpg" alt="customer">
+            <h6 id="name-of-reviewer">Ella Harper <span>/June 11, 2025</span></h6>
+            <p id="review-stars-rating">
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#ful-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#ful-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#ful-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#ful-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+            </p>
+          </div>
+          <div id="text-review">Proin iaculis nibh vitae lectus mollis bibendum. Quisque 
+varius eget urna sit amet luctus. Suspendisse potenti 
+curabitur ac placerat est, sit amet sodales risus.</div>
+        </div>
+        <form id="add-review-section" action="" method="post" >
+          <legend>Add review</legend>
+          <p>Your email address won’t be shared with anybody. Required fields have the symbol </p>
+          <div id="rate">rate product
+            <span id="stars">
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+              <svg height="14" width="16">
+                <use href="/src/assets/sprite.svg#empty-star"></use>
+              </svg>
+            </span>
+           </div>
+           <label for="new-review"></label>
+            <textarea id="new-review" name="new-review" placeholder="Your review" rows="5"cols="33" required></textarea>
+           <label for="name"></label>
+           <input type="text" id="name" name="name" placeholder="Your name" autocomplete="username" required>
+           <label for="email"> </label>
+           <input id="email" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+           <br/>
+           <input type="checkbox" id="agree" name="agree" required>
+           <label for="agree">Save my name, email, and website in this browser for when I leave another comment.</label>
+           <br/>
+           <button type="submit" id="submit-button">submit</button>
+          </form>
+      </div>
+      <p id="shipping-policy-block" class="prod-info" style ="display:none">
+        Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
+        mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet.
+        Etiam a ex at ante tincidunt imperdiet. Nunc congue ex vel nisl viverra,
+        sit amet aliquet lectus ullamcorper. Praesent luctus lacus non lorem
+        elementum, eu tristique sapien suscipit. Sed bibendum, ipsum nec viverra
+        malesuada, erat nisi sodales purus, eget hendrerit dui ligula eu enim.
+        Ut non est nisi. Pellentesque tristique pretium dolor eu commodo. Proin
+        iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit
+        amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet
+        sodales risus. 
+        <br/>
+        <br/>
+        Pellentesque viverra dui auctor, ullamcorper turpis
+        pharetra, facilisis quam. Proin iaculis nibh vitae lectus mollis
+        bibendum. Quisque varius eget urna sit amet luctus. Suspendisse potenti.
+        Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra
+        dui auctor, ullamcorper turpis pharetra, facilisis quam. Proin iaculis
+        nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet
+        luctus.
+      </p>
+    </section>
+    <section id="also-like">
+      <h4>You May Also Like</h4>
+      <svg width="282" height="2">
+        <use href="/src/assets/sprite.svg#line"></use>
+      </svg>
+      <div id="also-like-products"></div>
+    </section>
+  </main>
+</body>

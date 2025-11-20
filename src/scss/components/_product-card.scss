@@ -1,0 +1,110 @@
+@use "buttons";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 24%;
+    justify-content: space-between;   
+    margin: 0 12px; 
+    height: 500px;    
+
+    .photo-sale-block{
+    height: 400px;
+    overflow: hidden;
+   
+        img{
+    height: 400px;
+    width: 100%;
+}
+        .sale{
+    @extend .sale;
+    bottom: 105%;
+    left: -31%;
+    @extend .secondary-font;
+}
+
+        }
+    .photo-sale-block:hover{
+        cursor: pointer;
+    }
+    h6{
+        font-weight: 700;
+        font-size: 19px;
+        text-align: center;
+          height: 50px;
+    }
+    h6:hover{
+        cursor: pointer;
+    }
+
+    .price {
+        color: var.$grey;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    #add-to-card{
+        color: var.$white;
+
+       }
+
+    }  
+       
+    #button-block{
+        display: flex;
+        justify-content: space-between;   
+       }
+     
+@media screen and (width <= 1199px){
+ .product {
+     height: 450px;
+
+.photo-sale-block{
+    height: 350px;
+
+img{
+    height: 350px;
+    width: 100%;
+    }
+
+}
+
+ h6{
+        font-size: 16px;
+    }
+}
+}
+
+@media (width <= 767px){
+    .product{
+    height: 400px;
+    font-weight: 500;
+    font-size: 14px;  
+
+.photo-sale-block{
+    height: 300px;
+    
+.sale{
+    width: 40px;
+    height: 25px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+img{
+    height:300px;
+}
+    }
+
+     h6{
+        font-size: 14px;
+        font-weight: 500;
+        width: 200px;
+    }
+    }   
+  }
+    

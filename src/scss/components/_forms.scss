@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as var;
+
+form{
+     input,
+     textarea,
+     #message {
+         display: block;
+         border: 2px solid var.$pink;
+         margin-bottom: 30px;
+     }
+
+     button{
+        text-transform: uppercase;
+     }
+}

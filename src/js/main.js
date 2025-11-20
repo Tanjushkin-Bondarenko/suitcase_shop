@@ -1,5 +1,8 @@
-import { loadPage, setNavigation } from "./home.js";
-import { buildProducts } from "./home.js";
+import { loadPage, setNavigation, buildProducts } from "./home.js";
+import { showQuantityInCart } from "./cart.js";
+
+const hamburger = document.querySelector(".hamburger");
+const headerMenu = document.querySelector("#header-menu");
 
 function router() {
   const hash = location.hash.replace("#", "");
@@ -20,7 +23,7 @@ window.addEventListener("hashchange", ()=>{
 );
 
 export async function createPath(pageName, element){
-  const response = await fetch(`/fundamentals-project-template/src/html/${pageName}.html`)
+  const response = await fetch(`html/${pageName}.html`)
   const data = await response.text()
   element.innerHTML = data
 }
@@ -29,10 +32,15 @@ export async function createPath(pageName, element){
 
 window.scrollTo(0, 0)
 setNavigation()
-buildProducts("/fundamentals-project-template/src/assets/data.json")
-    //   showQuantityInCart()
+buildProducts("/src/assets/data.json")
+showQuantityInCart()
 
 
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active")
+  headerMenu.classList.toggle("active")
+});
 
 
 

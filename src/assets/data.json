@@ -141,7 +141,7 @@
     "salesStatus": false,
     "rating": 4.5,
     "popularity": 82,
-    "blocks": []
+    "blocks": ["New Products Arrival"]
   },
   {
     "id": "SU012",
@@ -211,28 +211,30 @@
   {
     "id": "SET017",
     "name": "Premium Explorer Luggage Set",
-    "price": 750,
+    "price": 1200,
     "imageUrl": "image17.jpg",
     "category": "luggage sets",
     "color": "black",
     "size": "S, M, XL",
-    "salesStatus": true,
+    "salesStatus": false,
     "rating": 4.5,
     "popularity": 88,
-    "blocks": []
+    "blocks": [],
+    "description": "Laoreet rhoncus ipsum eget tempus raesent convallis."
   },
   {
     "id": "SET018",
     "name": "Deluxe Family Travel Set",
-    "price": 800,
+    "price": 2100,
     "imageUrl": "image18.jpg",
     "category": "luggage sets",
-    "color": "grey",
+    "color": "blue",
     "size": "S, M, XL",
     "salesStatus": false,
     "rating": 5.0,
     "popularity": 90,
-    "blocks": []
+    "blocks": [],
+    "description": "Laoreet rhoncus ipsum eget tempus raesent convallis."
   },
   {
     "id": "CO019",
@@ -258,7 +260,75 @@
     "salesStatus": false,
     "rating": 4.2,
     "popularity": 78,
+    "blocks": ["Selected Products"]
+  },
+   {
+    "id": "CO021",
+    "name": "Set Lightweight Traveller's Suitcases",
+    "price": 1000,
+    "imageUrl": "image21.jpg",
+    "category": "luggage sets",
+    "color": "red",
+    "size": "S, M, XL",
+    "salesStatus": false,
+    "rating": 5.0,
+    "popularity": 72,
+    "blocks": [],
+    "description": "Primis in faucibus aenean laoreet rhoncus ipsum eget."
+  },
+  {
+    "id": "CO022",
+    "name": "Lightweight Traveller's Suitcase",
+    "price": 750,
+    "imageUrl": "image22.jpg",
+    "category": "suitcases",
+    "color": "black",
+    "size": "S",
+    "salesStatus": false,
+    "rating": 5.0,
+    "popularity": 90,
     "blocks": []
+  },
+  {
+    "id": "CO023",
+    "name": "Lightweight Traveller's Suitcase XL",
+    "price": 750,
+    "imageUrl": "image23.jpg",
+    "category": "suitcases",
+    "color": "blue",
+    "size": "XL",
+    "salesStatus": false,
+    "rating": 5.0,
+    "popularity": 100,
+    "blocks": []
+  },
+  {
+    "id": "CO024",
+    "name": "Set family Lightweight Traveller's Suitcases",
+    "price": 1500,
+    "imageUrl": "image24.jpg",
+    "category": "luggage sets",
+    "color": "yellow",
+    "size": "S, M, XL",
+    "salesStatus": false,
+    "rating": 5.0,
+    "popularity": 82,
+    "blocks": [],
+    "description": "Interdum et malesuada fames ante ipsum primis in faucibus."
+  },
+  {
+    "id": "CO025",
+    "name": "Set Family Lightweight Traveller's Suitcases",
+    "price": 1100,
+    "imageUrl": "image25.jpg",
+    "category": "luggage sets",
+    "color": "green",
+    "size": "S, M, XL",
+    "salesStatus": false,
+    "rating": 5.0,
+    "popularity": 99,
+    "blocks": [], 
+    "description": "Rhoncus ipsum eget tempus Praesent convallis fermentum."
   }
 ]
 }

@@ -1,5 +1,7 @@
 @use "abstracts/variables"as var;
-@use "../scss/components/buttons";
+@use "abstracts/mixins";
+@use "layouts/header";
+@use "layouts/footer";
 @use "base/fonts";
 @use "base/reset";
 @use "pages/about";
@@ -7,7 +9,9 @@
 @use "pages/catalog";
 @use "pages/product-details";
 @use "pages/contact";
-
+@use "components/product-card";
+@use "components/forms";
+@use "components/buttons";
 
 #home {
     margin: 0;
@@ -28,8 +32,7 @@
 
             p {
                 padding: 30px 0;
-                font-weight: 400;
-                font-size: 17px;
+                @extend .secondary-font;
                 color: var.$grey;
             }
 
@@ -76,8 +79,7 @@
                 }
 
                article{
-                    font-weight: 400;
-                    font-size: 17px;
+                   @extend .secondary-font;
                     color: var.$grey;
                     line-height: 130%;
                 }
@@ -90,7 +92,7 @@
         }
 
         #photo-block {
-            background-image: url("/fundamentals-project-template/src/assets/img/hp2.png");
+            background-image: url("/src/assets/img/hp2.png");
             background-size: cover;
             color: var.$white;
             display: flex;
@@ -108,8 +110,7 @@
             }
 
             p {
-                font-size: 17px;
-                font-weight: 400;
+                @extend .secondary-font;
             }
 
             button {
@@ -117,12 +118,10 @@
                 height: 60px;
                 font-size: 18px;
             }
-
         }
     }
 
     .block {
-        width: 80%;
         margin: 0 auto;
         text-align: center;
 
@@ -134,14 +133,13 @@
 
     .discription {
         margin: 10px 0 50px;
-        font-size: 17px;
-        font-weight: 400;
+        @extend .secondary-font;
         text-align: center;
         color: var.$grey;
         }
     }
 
-    #travel-suitcases {
+    #travel-suitcases { 
         overflow-x: hidden;
 
     h3{
@@ -162,7 +160,7 @@
 
     @for $i from 1 to 5{
     .cases#{$i} {
-        background: center / cover no-repeat url("/fundamentals-project-template/src/assets/img/hp-travel#{$i}.png");
+        background: center / cover no-repeat url("/src/assets/img/hp-travel#{$i}.png");
         width: 24%;
         height:100%;
         display: flex;
@@ -186,8 +184,7 @@
 
     p {
         width: 170px;
-        font-size: 17px;
-        font-weight: 400;
+        @extend .secondary-font;
         padding-bottom: 60px;
             }
     }
@@ -208,28 +205,15 @@
         width: 24%;
 
     .sale-button{
-        position: relative;
         left:-30%;
-        width: 54px;
-        height: 28px;
+        @extend .sale;
         font-size: 12px;
-        font-weight: 700;
     }
-        }
-
-       
+    }
     }
 
   #offer-block{
-           background-image: url("/fundamentals-project-template/src/assets/img/offer.jpg");
-           width: 80%;
-           display: grid;
-           grid-template-columns: repeat(2, 1fr);
-           height: 400px;
-           margin: 0 auto 120px;
-           justify-content: space-between;
-           align-items: center;
-           color: var.$white;
+          @extend .offer-block;
 
     p{
            text-align: center;
@@ -280,7 +264,7 @@
         height: 440px;
         margin: 40px auto;
         border: 1px solid var.$white;
-        box-shadow: 0 20px 80px 0 #C1C7D4B3;
+        box-shadow: var.$box-shadow;
         font-size: 17px;
 
     img{
@@ -289,7 +273,7 @@
          }
 
     .review{
-        font-weight: 400;
+        @extend .secondary-font;
          }
 
     .customer-name{
@@ -299,6 +283,8 @@
         }
     }}
 }
+
+
 
 @media screen and (width <= 1199px){
 #home {

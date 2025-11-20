@@ -1,18 +1,24 @@
-import { createPath } from "./main.js";
-import { addProductToCart } from "./cart.js";
+
+import { showError, openCart, changeQuantityInCardIcon, findIndexCurrentElem } from "./cart.js";
+
+import { viewProduct } from "./product-card.js";
+
 
 export function buildCard(item) {     
+   
   const div = document.createElement("div"); 
   div.dataset.id = item.id;   
   div.className = "product";
   const photoSaleBlock = document.createElement("div");
   photoSaleBlock.className ="photo-sale-block"
+  photoSaleBlock.addEventListener("click", ()=>viewProduct(item.id))
   const photo = document.createElement("img")
-  photo.src = `/fundamentals-project-template/src/assets/img/${item.imageUrl}`
+  photo.src = `assets/img/${item.imageUrl}`
   photo.alt = item.name;
   photo.loading = "lazy"
   const nameTag = document.createElement("h6");
   nameTag.textContent = item.name;
+  nameTag.addEventListener("click", ()=>viewProduct(item.id))
   const priceTag = document.createElement("p")
   priceTag.className = "price";
   priceTag.textContent = `$${item.price}`
@@ -21,10 +27,10 @@ export function buildCard(item) {
   div.append(nameTag);
   div.append(priceTag)
   if (item.salesStatus) {
-    const salesBtn = document.createElement("button");
-    salesBtn.textContent = "Sale";
-    salesBtn.className = "sale-button";
-    photoSaleBlock.append(salesBtn)
+    const sale = document.createElement("span");
+    sale.textContent = "Sale";
+    sale.className = "sale";
+    photoSaleBlock.append(sale)
   }
   return div
 }
@@ -35,100 +41,107 @@ export function createButton() {
   return addToCardBtn
 }
 
-export async function viewProduct(id){
-  
-  let prodCartPage = document.querySelector("#main-content")
-  document.querySelector("#home").style.display = "none";
-  prodCartPage.style.display="block"
-  await createPath("components","product-card", prodCartPage)
-   
-  showProductDetail(id)
-  const addBtn = document.querySelector("#add");
-  const subBtn = document.querySelector("#subtract");
-  const quantity = document.querySelector("#quantity");
-  
-  addBtn.addEventListener("click", ()=>{
-    quantity.textContent = Number(quantity.textContent) +1
-  });
-  subBtn.addEventListener("click", ()=>{
-    if(quantity.textContent == 1)return
-    quantity.textContent = Number(quantity.textContent) -1
-  }) 
 
+export function createSvgIcon(val){
+  return `<svg>
+<use href='/src/assets/sprite.svg#${val}'>
+</use></svg>` 
 }
 
-function showProductDetail(id){  
-  const prodDetailsBtns = document.querySelectorAll("#product-detais-btns > button");
-  const prodDetailsInfo = document.querySelectorAll(".prod-info");
-  const rating = document.querySelector("#stars-rating")
-  const sizeOption = document.querySelectorAll("#size > option")
-  const addToCart = document.querySelector("#add-to-cart");
-  const img = document.querySelector("#main-img")
-  addToCart.addEventListener("click", (event)=>{
-    addProductToCart(event.target.parentElement)
+export function addProductToCart(element){
+  
+  const price = element.querySelector("#price").textContent;
+  const size = document.querySelector("#size");
+  const color = document.querySelector("#color");
+  const category = document.querySelector("#category");
+  const priceNumber = price.slice(1)
+  let quantity = Number(element.querySelector("#quantity").textContent)
+  let quantityInCard = document.querySelector("#quantity-in-card")
+
+  showError(element);
+
+  if(size.value == ""||color.value == ""||category.value ==""){
+    return;
+  }
+
+  const product = {
+    id: element.dataset.id,
+    name: element.querySelector("#product-details-title").textContent,
+    img: element.querySelector("#main-img").dataset.info,
+    quantity: quantity,
+    price: priceNumber,
+    size: size.value,
+    color: color.value,
+    category: category.value,
+    total: quantity * priceNumber,
+   
+  }
+ 
+  const cartItems = JSON.parse(localStorage.getItem("product")) || [];
+  const existingProductIndex = findIndexCurrentElem(cartItems, product)
+
+  if(existingProductIndex > -1){
+    let carentQuantity = Number(cartItems[existingProductIndex].quantity)
+    cartItems[existingProductIndex].quantity = carentQuantity + quantity
+  }else{
+    cartItems.push(product)
+  }
+
+  localStorage.setItem("product", JSON.stringify(cartItems))
+  changeQuantityInCardIcon(quantityInCard, quantity);
+  document.querySelector("#open-cart").addEventListener("click", ()=>{
+    openCart()
   })
+}
 
-  fetch("/src/assets/data.json")
-    .then(res => res.json())
-    .then(response =>{
-      let prod = response.data
-      let current = prod.find(item=>{
-        return item.id == id
-      })
 
-      if(current.size.length == 1){
-        for(let item of sizeOption){
-          item.disabled = item.value !== current.size;
-        }
-      }
-      img.src=`/fundamentals-project-template/src/assets/img/${current.imageUrl}`
-      img.dataset.info = current.imageUrl
-      document.querySelector("#product-details-title").textContent = current.name;
-      document.querySelector("#product").dataset.id = current.id
-      
-      for(let i=0;i<current.rating; i++){
+export function buildBestSetsProducts(item) {
+
+  const bestSetsSection = document.querySelector("#best-sets");
+  if(item.category === "luggage sets") {
+ if(bestSetsSection.querySelectorAll(".best-set-card").length == 5)return    
+
+      const card = document.createElement("div");
+      card.classList.add("best-set-card");
+      bestSetsSection.append(card);
+      const img = document.createElement("img");
+      img.alt = item.name;
+      img.loading = "lazy"
+      img.classList.add("best-set-img")
+      img.src = `assets/img/best-set-${item.color}.png`
+      card.append(img);
+      const descriptionTag = document.createElement("p");
+      descriptionTag.className = "best-set-description"
+      descriptionTag.textContent = item.description;    
+      const priceTag = document.createElement("p");
+      priceTag.classList.add("best-set-price")
+      priceTag.textContent = `$${item.price}`;
+      const rating = document.createElement("div");
+      rating.classList.add("best-set-rating")
+      card.append(descriptionTag);
+      card.append(showProductRating(item, rating));
+      card.append(priceTag);
+       
+     card.addEventListener("click", ()=>{viewProduct(item.id)})
+    } 
+} 
+
+function showProductRating(item, rating){
+  
+  for(let i=0;i<item.rating; i++){
         let span = document.createElement("span")
         span.innerHTML = createSvgIcon("ful-star")
         rating.append(span)
         span.querySelector("svg").classList.add("rating-icon")
          
       }
-      if(current.rating<5){
-        for(let i = current.rating; i<=5;i++){
+      if(item.rating<5){
+        for(let i = item.rating; i<=5;i++){
           let span = document.createElement("span");
           span.innerHTML = createSvgIcon("empty-star")
           rating.append(span)
           span.querySelector("svg").classList.add("rating-icon")
         }
-      }
-      document.querySelector("#clients-review").textContent = `(${current.popularity} clients reviw)`
-      document.querySelector("#price").textContent = `$${current.price}`
-
-      for(let i =0; i<4; i++){
-        let randomId = Math.floor(Math.random()* prod.length);
-        let product =  buildCard(prod[randomId]);
-        let button = createButton();
-        button.textContent = "Add To Card";
-        button.addEventListener("click", (e)=>viewProduct(e.target.parentElement.dataset.id))
-        product.append(button)
-        document.querySelector("#also-like-products").append(product)
-      }
-    });  
-
-  for(let btn of prodDetailsBtns){
-    btn.addEventListener("click", (e)=>{
-      if(e.target.classList.value == "active-button")return
-      for(let item of prodDetailsBtns)item.classList.remove("active-button");
-      for(let item of prodDetailsInfo)item.style.display="none"
-      e.target.classList.add("active-button")
-      document.querySelector(`#${e.target.id}-block`).style.display = "flex"  
-    })
-  }    
 }
-
-export function createSvgIcon(val){
-  return `<svg>
-<use href='/src/assets/sprite.svg#${val}'>
-</use></svg>` 
- 
-}
+return rating
+  }

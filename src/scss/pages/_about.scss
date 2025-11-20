@@ -1,8 +1,9 @@
 @use '../abstracts/variables' as var;
+@use "../abstracts/mixins";
 
 #about{
     #info{
-        background-image: url("/fundamentals-project-template/src/assets/img/about-bg.jpg");
+        background-image: url("/src/assets/img/about-bg.jpg");
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -18,8 +19,7 @@
     }
 
       div{
-        font-size: 17px;
-        font-weight: 400px;
+        @extend .secondary-font;
         color: var.$white;
       }
     }
@@ -44,8 +44,7 @@
         }
 
         p{
-            font-weight: 400;
-            font-size: 17px;
+            @extend .secondary-font;
             text-align: center;
             }
     }
@@ -69,8 +68,7 @@
             grid-column: 1/2;
             grid-row: 2/3;
             color: var.$grey;
-            font-size: 17px;
-            font-weight: 400;
+            @extend .secondary-font;
             margin: 30px auto;
            }
 
@@ -125,22 +123,13 @@
      }
 
     .div{
-            font-weight: 400;
-            font-size: 17px;
+             @extend .secondary-font;
         }
     }}
  }  
 
  #offer-block{
-           background-image: url("/fundamentals-project-template/src/assets/img/offer.jpg");
-           width: 80%;
-           display: grid;
-           grid-template-columns: repeat(2, 1fr);
-           height: 400px;
-           margin: 0 auto 120px;
-           justify-content: space-between;
-           align-items: center;
-           color: var.$white;
+           @extend .offer-block;
 
     p{
            text-align: center;
