@@ -12,26 +12,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   
     "sass": "sass src/scss/main.scss src/dist/main.css",
     "sass:watch": "sass --watch src/scss/main.scss:src/dist/main.css",
-
     "build": "echo \"Dummy build script required for Autocode Compile\"",
-
     "lint:js": "eslint . --ext .js",
     "lint:scss": "stylelint **/*.scss",
     "lint:css": "stylelint dist/main.css",
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:css",
     "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.scss\" --fix",
-
     "dev": "concurrently \"npm run sass\" \"live-server --port=3000 --open=src/index.html\""
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
+    "postcss-scss": "^4.0.9",
     "stylelint": "^16.25.0",
-    "stylelint-config-standard": "^39.0.1"
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-scss": "^6.12.1"
   },
   "dependencies": {
     "concurrently": "^9.2.1"

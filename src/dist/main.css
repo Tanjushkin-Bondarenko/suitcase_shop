@@ -1,6 +1,6 @@
-@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
-@import 'https://fonts.cdnfonts.com/css/helvetica-neue-55';
-@import 'https://fonts.cdnfonts.com/css/sf-pro-display';
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 .sale, #home .home-product-container .product .sale-button, .product .photo-sale-block .sale, #home .home-product-container .product .photo-sale-block .sale-button {
   position: relative;
   width: 54px;
