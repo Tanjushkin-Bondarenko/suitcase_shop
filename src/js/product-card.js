@@ -28,7 +28,7 @@ export function showProductDetail(id){
           item.disabled = item.value !== current.size;
         }
       }
-      img.src=`./src/assets/img/${current.imageUrl}`
+      img.src=`../assets/img/${current.imageUrl}`
       img.dataset.info = current.imageUrl
       document.querySelector("#product-details-title").textContent = current.name;
       document.querySelector("#product").dataset.id = current.id
