@@ -15,7 +15,7 @@ export function showProductDetail(id){
     addProductToCart(event.target.parentElement)
   })
 
-  fetch("/src/assets/data.json")
+  fetch("./src/assets/data.json")
     .then(res => res.json())
     .then(response =>{
       let prod = response.data
@@ -28,7 +28,7 @@ export function showProductDetail(id){
           item.disabled = item.value !== current.size;
         }
       }
-      img.src=`/src/assets/img/${current.imageUrl}`
+      img.src=`./src/assets/img/${current.imageUrl}`
       img.dataset.info = current.imageUrl
       document.querySelector("#product-details-title").textContent = current.name;
       document.querySelector("#product").dataset.id = current.id

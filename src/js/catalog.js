@@ -20,7 +20,7 @@ export function showProducts(){
   const sizeInput = document.querySelector("#size-filter");
   const sale= document.querySelector("#sale");
 
-  fetch("/src/assets/data.json")
+  fetch("./src/assets/data.json")
     .then(res => res.json())
     .then(result => {
       products = prodList= result.data;

@@ -44,7 +44,7 @@ export function createButton() {
 
 export function createSvgIcon(val){
   return `<svg>
-<use href='/src/assets/sprite.svg#${val}'>
+<use href='./src/assets/sprite.svg#${val}'>
 </use></svg>` 
 }
 

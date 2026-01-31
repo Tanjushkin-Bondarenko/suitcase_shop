@@ -32,7 +32,7 @@ export async function createPath(pageName, element){
 
 window.scrollTo(0, 0)
 setNavigation()
-buildProducts("/src/assets/data.json")
+buildProducts("./src/assets/data.json")
 showQuantityInCart()
 
 
