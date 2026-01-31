@@ -23,7 +23,7 @@ window.addEventListener("hashchange", ()=>{
 );
 
 export async function createPath(pageName, element){
-  const response = await fetch(`html/${pageName}.html`)
+  const response = await fetch(`src/html/${pageName}.html`)
   const data = await response.text()
   element.innerHTML = data
 }

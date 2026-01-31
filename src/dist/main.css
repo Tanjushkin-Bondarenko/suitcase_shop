@@ -2288,7 +2288,7 @@ form button {
   #contact #contact-bunner {
     width: 100%;
     background-color: #E9E9ED;
-    margin-bottom: 25px auto;
+    margin: 25px auto;
     background-image: none;
     height: 100px;
   }

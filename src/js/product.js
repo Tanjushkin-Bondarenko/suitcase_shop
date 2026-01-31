@@ -13,7 +13,7 @@ export function buildCard(item) {
   photoSaleBlock.className ="photo-sale-block"
   photoSaleBlock.addEventListener("click", ()=>viewProduct(item.id))
   const photo = document.createElement("img")
-  photo.src = `assets/img/${item.imageUrl}`
+  photo.src = `src/assets/img/${item.imageUrl}`
   photo.alt = item.name;
   photo.loading = "lazy"
   const nameTag = document.createElement("h6");
@@ -110,7 +110,7 @@ export function buildBestSetsProducts(item) {
       img.alt = item.name;
       img.loading = "lazy"
       img.classList.add("best-set-img")
-      img.src = `assets/img/best-set-${item.color}.png`
+      img.src = `src/assets/img/best-set-${item.color}.png`
       card.append(img);
       const descriptionTag = document.createElement("p");
       descriptionTag.className = "best-set-description"
