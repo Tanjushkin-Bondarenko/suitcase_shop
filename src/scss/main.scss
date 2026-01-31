@@ -95,7 +95,7 @@
         }
 
         #photo-block {
-            background-image: url("./src/assets/img/hp2.png");
+            background-image: url("../assets/img/hp2.png");
             background-size: cover;
             color: var.$white;
             display: flex;
@@ -167,7 +167,7 @@
     .cases#{$i}
 
  {
-        background: center / cover no-repeat url("./src/assets/img/hp-travel#{$i}.png");
+        background: center / cover no-repeat url("../assets/img/hp-travel#{$i}.png");
         width: 24%;
         height:100%;
         display: flex;

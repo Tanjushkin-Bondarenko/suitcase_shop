@@ -15,7 +15,7 @@
 }
 
 .offer-block, #home #offer-block, #about #offer-block {
-  background-image: url("./src/assets/img/offer.jpg");
+  background-image: url("../assets/img/offer.jpg");
   width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -612,7 +612,7 @@ body {
 }
 
 #about #info {
-  background-image: url("./src/assets/img/about-bg.jpg");
+  background-image: url("../assets/img/about-bg.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -949,7 +949,7 @@ body {
   width: 100%;
 }
 #cart #card-bg {
-  background: no-repeat center/100% url("./src/assets/img/cart-bg.png");
+  background: no-repeat center/100% url("../assets/img/cart-bg.png");
   margin: 10px 0;
   height: 200px;
 }
@@ -2117,7 +2117,7 @@ form button {
 
 #contact #contact-bunner {
   margin-bottom: 130px;
-  background-image: url("./src/assets/img/contact-bg.jpg");
+  background-image: url("../assets/img/contact-bg.jpg");
   height: 554px;
   display: flex;
   flex-direction: column;
@@ -2589,7 +2589,7 @@ button:hover {
   font-size: 20px;
 }
 #home #discont-block #photo-block {
-  background-image: url("./src/assets/img/hp2.png");
+  background-image: url("../assets/img/hp2.png");
   background-size: cover;
   color: #FFF;
   display: flex;
@@ -2641,7 +2641,7 @@ button:hover {
   transition: transform 0.3s ease-in-out;
 }
 #home #travel-suitcases #goods-block .cases1 {
-  background: center/cover no-repeat url("./src/assets/img/hp-travel1.png");
+  background: center/cover no-repeat url("../assets/img/hp-travel1.png");
   width: 24%;
   height: 100%;
   display: flex;
@@ -2666,7 +2666,7 @@ button:hover {
   padding-bottom: 60px;
 }
 #home #travel-suitcases #goods-block .cases2 {
-  background: center/cover no-repeat url("./src/assets/img/hp-travel2.png");
+  background: center/cover no-repeat url("../assets/img/hp-travel2.png");
   width: 24%;
   height: 100%;
   display: flex;
@@ -2691,7 +2691,7 @@ button:hover {
   padding-bottom: 60px;
 }
 #home #travel-suitcases #goods-block .cases3 {
-  background: center/cover no-repeat url("./src/assets/img/hp-travel3.png");
+  background: center/cover no-repeat url("../assets/img/hp-travel3.png");
   width: 24%;
   height: 100%;
   display: flex;
@@ -2716,7 +2716,7 @@ button:hover {
   padding-bottom: 60px;
 }
 #home #travel-suitcases #goods-block .cases4 {
-  background: center/cover no-repeat url("./src/assets/img/hp-travel4.png");
+  background: center/cover no-repeat url("../assets/img/hp-travel4.png");
   width: 24%;
   height: 100%;
   display: flex;
